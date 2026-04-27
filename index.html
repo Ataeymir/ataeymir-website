@@ -1164,8 +1164,15 @@
       .hero { grid-template-columns: 1fr; }
 
       .hero-visual {
-        min-height: 55vw;
-        max-height: 320px;
+        min-height: 340px;
+        max-height: none;
+        padding-top: 90px;
+        padding-bottom: 2rem;
+        box-sizing: border-box;
+      }
+
+      .hero-visual .logo-center img {
+        width: clamp(130px, 42vw, 190px) !important;
       }
 
       .hero-content::before { display: none; }
@@ -1216,17 +1223,6 @@
         overflow: hidden;
         position: fixed;
         width: 100%;
-      }
-
-      .hero-visual {
-        min-height: 320px;
-        max-height: none;
-        padding-top: 100px;
-        padding-bottom: 2rem;
-      }
-
-      .hero-visual .logo-center img {
-        width: clamp(120px, 40vw, 180px) !important;
       }
 
       .scroll-hint { display: none; }
