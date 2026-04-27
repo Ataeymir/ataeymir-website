@@ -998,8 +998,9 @@
 
     /* ─── RESPONSIVE ──────────────────────────────────── */
     @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; }
-      .hero-visual { min-height: 260px; max-height: 260px; padding-top: 90px; padding-bottom: 1rem; box-sizing: border-box; }
+      .hero { grid-template-columns: 1fr; margin-top: 80px; }
+      .hero-visual { min-height: 320px; max-height: none; }
+      .hero-visual .olive-circles { inset: 0; position: absolute; }
       .hero-visual .logo-center img { width: clamp(130px, 42vw, 190px) !important; }
       .hero-content::before { display: none; }
       #about { grid-template-columns: 1fr; }
