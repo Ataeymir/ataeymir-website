@@ -1221,13 +1221,15 @@
       .hero-visual {
         min-height: 320px;
         max-height: none;
-        padding-top: 80px;
+        padding-top: 100px;
         padding-bottom: 2rem;
       }
 
       .hero-visual .logo-center img {
         width: clamp(120px, 40vw, 180px) !important;
       }
+
+      .scroll-hint { display: none; }
     }
 
     @media (max-width: 600px) {
@@ -1548,14 +1550,6 @@
         <p class="b2b-card-label">Yurtdışı</p>
         <h3>Uluslararası sipariş</h3>
         <p>Uluslararası gönderimlerde lojistik ve fiyatlandırma süreci talebinize göre özel olarak planlanır. Detaylı bir teklif için formu doldurun.</p>
-        <div style="margin-bottom:1.5rem; padding:1.2rem; background:var(--cream-dark); border-left:2px solid var(--gold);">
-          <p style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); margin-bottom:0.8rem;">Toptan Fiyat Listesi (USD)</p>
-          <p style="font-size:0.82rem; color:var(--brown-mid); line-height:2;">
-            750 ml Soğuk Sıkım — $9 <span style="color:var(--brown); opacity:0.5;">(MOQ 12)</span><br>
-            1000 ml Soğuk Sıkım — $12 <span style="color:var(--brown); opacity:0.5;">(MOQ 12)</span><br>
-            5000 ml Soğuk Sıkım — $50 <span style="color:var(--brown); opacity:0.5;">(MOQ 6)</span>
-          </p>
-        </div>
         <form class="b2b-form" action="https://formspree.io/f/xykbajon" method="POST">
           <input type="hidden" name="_subject" value="Yurtdışı Toplu Sipariş Talebi" />
           <label>Ad Soyad *</label>
