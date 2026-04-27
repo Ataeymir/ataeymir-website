@@ -195,7 +195,124 @@
     }
     .nav-lang::after { display: none !important; }
 
-    /* ─── B2B ─────────────────────────────────────────── */
+    /* ─── BİLİM VE GÜVENCE ───────────────────────────── */
+    #bilim {
+      background: var(--brown);
+      padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 8vw, 10rem);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #bilim::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      border: 1px solid rgba(201,168,76,0.1);
+    }
+
+    .bilim-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .bilim-left .section-label { color: var(--gold); }
+
+    .bilim-left .section-title {
+      color: var(--cream);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+    }
+
+    .bilim-left .section-title em { color: var(--gold-light); }
+
+    .bilim-left p {
+      font-size: 0.95rem;
+      line-height: 1.9;
+      color: rgba(245,240,232,0.75);
+      margin-bottom: 1.5rem;
+      max-width: 48ch;
+    }
+
+    .efsa-beyan {
+      border-left: 3px solid var(--gold);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      background: rgba(201,168,76,0.08);
+    }
+
+    .efsa-beyan p {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--cream) !important;
+      font-style: italic;
+      margin: 0 !important;
+    }
+
+    .efsa-beyan small {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: rgba(201,168,76,0.7);
+      margin-top: 0.8rem;
+      font-style: normal;
+    }
+
+    .bilim-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .param-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: center;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid rgba(245,240,232,0.08);
+    }
+
+    .param-row:last-child { border-bottom: none; }
+
+    .param-name {
+      font-size: 0.82rem;
+      color: rgba(245,240,232,0.6);
+      letter-spacing: 0.05em;
+    }
+
+    .param-value {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1rem;
+      color: var(--gold-light);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .param-note {
+      font-size: 0.68rem;
+      color: rgba(245,240,232,0.4);
+      display: block;
+      margin-top: 0.2rem;
+    }
+
+    .lab-info {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(245,240,232,0.1);
+    }
+
+    .lab-info p {
+      font-size: 0.75rem;
+      color: rgba(245,240,232,0.35);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 900px) {
+      .bilim-grid { grid-template-columns: 1fr; gap: 3rem; }
+    }
     #b2b {
       background: var(--cream-dark);
       padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 8vw, 10rem);
@@ -1059,11 +1176,25 @@
         align-items: center;
         justify-content: center;
         gap: 2.5rem;
-        z-index: 99;
+        z-index: 200;
       }
 
       .nav-links.open a {
         font-size: 1rem;
+      }
+
+      .hamburger {
+        z-index: 201;
+        position: relative;
+      }
+
+      .hero-visual {
+        min-height: 60vw;
+        max-height: 360px;
+      }
+
+      .hero-visual .logo-center img {
+        width: clamp(120px, 40vw, 200px) !important;
       }
     }
 
@@ -1082,6 +1213,7 @@
       <li><a href="#hakkimizda">Hakkımızda</a></li>
       <li><a href="#urunler">Ürünler</a></li>
       <li><a href="#uretim">Üretim</a></li>
+      <li><a href="#bilim">Bilim</a></li>
       <li><a href="#b2b">Toplu Sipariş</a></li>
       <li><a href="#iletisim" class="nav-cta">İletişim</a></li>
       <li><a href="en.html" class="nav-lang">EN</a></li>
@@ -1248,6 +1380,90 @@
     </div>
   </section>
 
+  <!-- BİLİM VE GÜVENCE -->
+  <section id="bilim">
+    <div class="bilim-grid">
+      <div class="bilim-left">
+        <p class="section-label reveal">Bilim ve Güvence</p>
+        <h2 class="section-title reveal">Bağımsız <em>laboratuvar</em> doğrulaması</h2>
+        <p class="reveal">
+          Zeytinyağımız, TÜRKAK akreditasyonu ve uluslararası EA/ILAC anlaşmaları kapsamında AB genelinde geçerli olan Aydın Ticaret Borsası Özel Gıda Kontrol Laboratuvarı tarafından analiz edilmiştir. Tüm parametreler extra virgin sınıfını karşılamaktadır.
+        </p>
+
+        <div class="efsa-beyan reveal">
+          <p>"Zeytinyağı polifenolleri, kan lipidlerinin oksidatif strese karşı korunmasına katkıda bulunur."</p>
+          <small>EFSA 432/2012 onaylı beyan — 325 mg/kg polifenol içeriğiyle beyan hakkı mevcuttur.</small>
+        </div>
+
+        <p class="reveal" style="font-size:0.8rem; color:rgba(245,240,232,0.4); margin-top:1rem;">
+          Rapor No: 2600549 · Tarih: 24.04.2026 · AYTB Özel Gıda Kontrol Lab. · TÜRKAK AB-0033-T
+        </p>
+      </div>
+
+      <div class="bilim-right reveal">
+        <div class="param-row">
+          <div>
+            <span class="param-name">Toplam Biyofenol</span>
+            <span class="param-note">EFSA eşiği: 250 mg/kg</span>
+          </div>
+          <span class="param-value">325 mg/kg</span>
+        </div>
+        <div class="param-row">
+          <div>
+            <span class="param-name">Serbest Yağ Asitliği</span>
+            <span class="param-note">Sınır: ≤ %0.8</span>
+          </div>
+          <span class="param-value">%0.60</span>
+        </div>
+        <div class="param-row">
+          <div>
+            <span class="param-name">Peroksit Sayısı</span>
+            <span class="param-note">Sınır: ≤ 20 meq O₂/kg</span>
+          </div>
+          <span class="param-value">8.27</span>
+        </div>
+        <div class="param-row">
+          <div>
+            <span class="param-name">K232</span>
+            <span class="param-note">Sınır: ≤ 2.5</span>
+          </div>
+          <span class="param-value">2.0</span>
+        </div>
+        <div class="param-row">
+          <div>
+            <span class="param-name">K270</span>
+            <span class="param-note">Sınır: ≤ 0.22</span>
+          </div>
+          <span class="param-value">0.15</span>
+        </div>
+        <div class="param-row">
+          <div>
+            <span class="param-name">Delta-K</span>
+            <span class="param-note">Sınır: ≤ 0.01</span>
+          </div>
+          <span class="param-value">0.00</span>
+        </div>
+        <div class="param-row">
+          <div>
+            <span class="param-name">FAEE</span>
+            <span class="param-note">AB sınırı: ≤ 30 mg/kg</span>
+          </div>
+          <span class="param-value">16.05 mg/kg</span>
+        </div>
+        <div class="param-row">
+          <div>
+            <span class="param-name">Oleik Asit</span>
+            <span class="param-note">Aralık: %55–85</span>
+          </div>
+          <span class="param-value">%70.38</span>
+        </div>
+        <div class="lab-info">
+          <p>Aydın Ticaret Borsası Özel Gıda Kontrol Laboratuvarı · TS EN ISO/IEC 17025:2017 · TÜRKAK AB-0033-T · EA ve ILAC anlaşmaları kapsamında AB ve uluslararası geçerli</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- B2B -->
   <section id="b2b">
     <div class="b2b-header">
@@ -1297,6 +1513,14 @@
         <p class="b2b-card-label">Yurtdışı</p>
         <h3>Uluslararası sipariş</h3>
         <p>Uluslararası gönderimlerde lojistik ve fiyatlandırma süreci talebinize göre özel olarak planlanır. Detaylı bir teklif için formu doldurun.</p>
+        <div style="margin-bottom:1.5rem; padding:1.2rem; background:var(--cream-dark); border-left:2px solid var(--gold);">
+          <p style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); margin-bottom:0.8rem;">Toptan Fiyat Listesi (USD)</p>
+          <p style="font-size:0.82rem; color:var(--brown-mid); line-height:2;">
+            750 ml Soğuk Sıkım — $9 <span style="color:var(--brown); opacity:0.5;">(MOQ 12)</span><br>
+            1000 ml Soğuk Sıkım — $12 <span style="color:var(--brown); opacity:0.5;">(MOQ 12)</span><br>
+            5000 ml Soğuk Sıkım — $50 <span style="color:var(--brown); opacity:0.5;">(MOQ 6)</span>
+          </p>
+        </div>
         <form class="b2b-form" action="https://formspree.io/f/xykbajon" method="POST">
           <input type="hidden" name="_subject" value="Yurtdışı Toplu Sipariş Talebi" />
           <label>Ad Soyad *</label>
@@ -1386,10 +1610,17 @@
 
     menuBtn.addEventListener('click', () => {
       navLinks.classList.toggle('open');
+      const isOpen = navLinks.classList.contains('open');
+      menuBtn.innerHTML = isOpen
+        ? '<span style="transform:rotate(45deg) translate(5px,5px)"></span><span style="opacity:0"></span><span style="transform:rotate(-45deg) translate(5px,-5px)"></span>'
+        : '<span></span><span></span><span></span>';
     });
 
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('open'));
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuBtn.innerHTML = '<span></span><span></span><span></span>';
+      });
     });
 
     // Scroll reveal

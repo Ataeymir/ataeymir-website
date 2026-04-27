@@ -618,8 +618,124 @@
 
     .step-desc { font-size: 0.82rem; line-height: 1.75; color: var(--brown-mid); }
 
-    /* ─── B2B ─────────────────────────────────────────── */
-    #wholesale {
+    /* ─── SCIENCE & ASSURANCE ────────────────────────── */
+    #science {
+      background: var(--brown);
+      padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 8vw, 10rem);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #science::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      border: 1px solid rgba(201,168,76,0.1);
+    }
+
+    .science-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .science-left .section-label { color: var(--gold); }
+
+    .science-left .section-title {
+      color: var(--cream);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+    }
+
+    .science-left .section-title em { color: var(--gold-light); }
+
+    .science-left p {
+      font-size: 0.95rem;
+      line-height: 1.9;
+      color: rgba(245,240,232,0.75);
+      margin-bottom: 1.5rem;
+      max-width: 48ch;
+    }
+
+    .efsa-beyan {
+      border-left: 3px solid var(--gold);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      background: rgba(201,168,76,0.08);
+    }
+
+    .efsa-beyan p {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--cream) !important;
+      font-style: italic;
+      margin: 0 !important;
+    }
+
+    .efsa-beyan small {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: rgba(201,168,76,0.7);
+      margin-top: 0.8rem;
+      font-style: normal;
+    }
+
+    .science-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .param-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: center;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid rgba(245,240,232,0.08);
+    }
+
+    .param-row:last-child { border-bottom: none; }
+
+    .param-name {
+      font-size: 0.82rem;
+      color: rgba(245,240,232,0.6);
+      letter-spacing: 0.05em;
+    }
+
+    .param-value {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1rem;
+      color: var(--gold-light);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .param-note {
+      font-size: 0.68rem;
+      color: rgba(245,240,232,0.4);
+      display: block;
+      margin-top: 0.2rem;
+    }
+
+    .lab-info {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(245,240,232,0.1);
+    }
+
+    .lab-info p {
+      font-size: 0.75rem;
+      color: rgba(245,240,232,0.35);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 900px) {
+      .science-grid { grid-template-columns: 1fr; gap: 3rem; }
+    }
       background: var(--cream-dark);
       padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 8vw, 10rem);
     }
@@ -876,9 +992,12 @@
         align-items: center;
         justify-content: center;
         gap: 2.5rem;
-        z-index: 99;
+        z-index: 200;
       }
       .nav-links.open a { font-size: 1rem; }
+      .hamburger { z-index: 201; position: relative; }
+      .hero-visual { min-height: 60vw; max-height: 360px; }
+      .hero-visual .logo-center img { width: clamp(120px, 40vw, 200px) !important; }
     }
 
     @media (max-width: 600px) {
@@ -896,6 +1015,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#products">Products</a></li>
       <li><a href="#process">Process</a></li>
+      <li><a href="#science">Science</a></li>
       <li><a href="#wholesale">Wholesale</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
       <li><a href="index.html" class="nav-lang">TR</a></li>
@@ -1061,6 +1181,90 @@
     </div>
   </section>
 
+  <!-- SCIENCE & ASSURANCE -->
+  <section id="science">
+    <div class="science-grid">
+      <div class="science-left">
+        <p class="section-label reveal">Science & Assurance</p>
+        <h2 class="section-title reveal">Independent <em>laboratory</em> verification</h2>
+        <p class="reveal">
+          Our olive oil is analysed by the Aydın Commodity Exchange Private Food Control Laboratory, accredited under TÜRKAK (AB-0033-T) and internationally recognised through EA and ILAC agreements — valid across the European Union. All parameters meet extra virgin classification.
+        </p>
+
+        <div class="efsa-beyan reveal">
+          <p>"Olive oil polyphenols contribute to the protection of blood lipids from oxidative stress."</p>
+          <small>EFSA-authorised health claim (Reg. 432/2012) — applicable at 325 mg/kg polyphenol content, exceeding the 250 mg/kg threshold by 30%.</small>
+        </div>
+
+        <p class="reveal" style="font-size:0.8rem; color:rgba(245,240,232,0.4); margin-top:1rem;">
+          Report No: 2600549 · Date: 24.04.2026 · AYTB Private Food Control Lab · TÜRKAK AB-0033-T
+        </p>
+      </div>
+
+      <div class="science-right reveal">
+        <div class="param-row">
+          <div>
+            <span class="param-name">Total Biophenols</span>
+            <span class="param-note">EFSA threshold: 250 mg/kg</span>
+          </div>
+          <span class="param-value">325 mg/kg</span>
+        </div>
+        <div class="param-row">
+          <div>
+            <span class="param-name">Free Fatty Acidity</span>
+            <span class="param-note">Limit: ≤ 0.8%</span>
+          </div>
+          <span class="param-value">0.60%</span>
+        </div>
+        <div class="param-row">
+          <div>
+            <span class="param-name">Peroxide Value</span>
+            <span class="param-note">Limit: ≤ 20 meq O₂/kg</span>
+          </div>
+          <span class="param-value">8.27</span>
+        </div>
+        <div class="param-row">
+          <div>
+            <span class="param-name">K232</span>
+            <span class="param-note">Limit: ≤ 2.5</span>
+          </div>
+          <span class="param-value">2.0</span>
+        </div>
+        <div class="param-row">
+          <div>
+            <span class="param-name">K270</span>
+            <span class="param-note">Limit: ≤ 0.22</span>
+          </div>
+          <span class="param-value">0.15</span>
+        </div>
+        <div class="param-row">
+          <div>
+            <span class="param-name">Delta-K</span>
+            <span class="param-note">Limit: ≤ 0.01</span>
+          </div>
+          <span class="param-value">0.00</span>
+        </div>
+        <div class="param-row">
+          <div>
+            <span class="param-name">FAEE</span>
+            <span class="param-note">EU limit: ≤ 30 mg/kg</span>
+          </div>
+          <span class="param-value">16.05 mg/kg</span>
+        </div>
+        <div class="param-row">
+          <div>
+            <span class="param-name">Oleic Acid</span>
+            <span class="param-note">Range: 55–85%</span>
+          </div>
+          <span class="param-value">70.38%</span>
+        </div>
+        <div class="lab-info">
+          <p>Aydın Commodity Exchange Private Food Control Laboratory · TS EN ISO/IEC 17025:2017 · TÜRKAK AB-0033-T · Internationally recognised under EA and ILAC mutual recognition agreements</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- WHOLESALE / B2B -->
   <section id="wholesale">
     <div class="b2b-header">
@@ -1109,6 +1313,14 @@
         <p class="b2b-card-label">International</p>
         <h3>International orders</h3>
         <p>We offer tailored logistics and pricing for international shipping. Submit an enquiry and we will prepare a personalised proposal for you.</p>
+        <div style="margin-bottom:1.5rem; padding:1.2rem; background:var(--cream-dark); border-left:2px solid var(--gold);">
+          <p style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); margin-bottom:0.8rem;">Wholesale Price List (USD)</p>
+          <p style="font-size:0.82rem; color:var(--brown-mid); line-height:2;">
+            750 ml Cold-Pressed — $9 <span style="color:var(--brown); opacity:0.5;">(MOQ 12)</span><br>
+            1000 ml Cold-Pressed — $12 <span style="color:var(--brown); opacity:0.5;">(MOQ 12)</span><br>
+            5000 ml Cold-Pressed — $50 <span style="color:var(--brown); opacity:0.5;">(MOQ 6)</span>
+          </p>
+        </div>
         <form class="b2b-form" action="https://formspree.io/f/xvzvnrle" method="POST">
           <input type="hidden" name="_subject" value="International Wholesale Enquiry" />
           <label>Full Name *</label>
@@ -1194,9 +1406,19 @@
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
 
-    menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      const isOpen = navLinks.classList.contains('open');
+      menuBtn.innerHTML = isOpen
+        ? '<span style="transform:rotate(45deg) translate(5px,5px)"></span><span style="opacity:0"></span><span style="transform:rotate(-45deg) translate(5px,-5px)"></span>'
+        : '<span></span><span></span><span></span>';
+    });
+
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('open'));
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuBtn.innerHTML = '<span></span><span></span><span></span>';
+      });
     });
 
     const observer = new IntersectionObserver((entries) => {
