@@ -78,7 +78,7 @@
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
-      z-index: 100;
+      z-index: 300;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -982,20 +982,23 @@
       .contact-visual { min-height: 280px; }
       .b2b-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
-      .hamburger { display: flex; }
+      .hamburger { display: flex; z-index: 301; position: relative; }
       .nav-links.open {
         display: flex;
         flex-direction: column;
         position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background: var(--white);
+        top: 0; left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #fefcf8;
         align-items: center;
         justify-content: center;
         gap: 2.5rem;
-        z-index: 200;
+        z-index: 300;
+        overflow: hidden;
       }
-      .nav-links.open a { font-size: 1rem; }
-      .hamburger { z-index: 201; position: relative; }
+      .nav-links.open a { font-size: 1.1rem; }
+      body.menu-open { overflow: hidden; position: fixed; width: 100%; }
       .hero-visual { min-height: 60vw; max-height: 360px; }
       .hero-visual .logo-center img { width: clamp(120px, 40vw, 200px) !important; }
     }
@@ -1015,7 +1018,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#products">Products</a></li>
       <li><a href="#process">Process</a></li>
-      <li><a href="#science">Science</a></li>
+      <li><a href="#science">Quality Assurance</a></li>
       <li><a href="#wholesale">Wholesale</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
       <li><a href="index.html" class="nav-lang">TR</a></li>
@@ -1185,8 +1188,8 @@
   <section id="science">
     <div class="science-grid">
       <div class="science-left">
-        <p class="section-label reveal">Science & Assurance</p>
-        <h2 class="section-title reveal">Independent <em>laboratory</em> verification</h2>
+        <p class="section-label reveal">Quality Assurance</p>
+        <h2 class="section-title reveal">Independent <em>laboratory</em> assurance</h2>
         <p class="reveal">
           Our olive oil is analysed by the Aydın Commodity Exchange Private Food Control Laboratory, accredited under TÜRKAK (AB-0033-T) and internationally recognised through EA and ILAC agreements — valid across the European Union. All parameters meet extra virgin classification.
         </p>
@@ -1409,6 +1412,7 @@
     menuBtn.addEventListener('click', () => {
       navLinks.classList.toggle('open');
       const isOpen = navLinks.classList.contains('open');
+      document.body.classList.toggle('menu-open', isOpen);
       menuBtn.innerHTML = isOpen
         ? '<span style="transform:rotate(45deg) translate(5px,5px)"></span><span style="opacity:0"></span><span style="transform:rotate(-45deg) translate(5px,-5px)"></span>'
         : '<span></span><span></span><span></span>';
@@ -1417,6 +1421,7 @@
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
+        document.body.classList.remove('menu-open');
         menuBtn.innerHTML = '<span></span><span></span><span></span>';
       });
     });

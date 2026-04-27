@@ -127,7 +127,7 @@
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
-      z-index: 100;
+      z-index: 300;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -1165,27 +1165,29 @@
       .contact-visual { min-height: 280px; }
 
       .nav-links { display: none; }
-      .hamburger { display: flex; }
+      .hamburger { display: flex; z-index: 301; position: relative; }
 
       .nav-links.open {
         display: flex;
         flex-direction: column;
         position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background: var(--white);
+        top: 0; left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #fefcf8;
         align-items: center;
         justify-content: center;
         gap: 2.5rem;
-        z-index: 200;
+        z-index: 300;
+        overflow: hidden;
       }
 
-      .nav-links.open a {
-        font-size: 1rem;
-      }
+      .nav-links.open a { font-size: 1.1rem; }
 
-      .hamburger {
-        z-index: 201;
-        position: relative;
+      body.menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
       }
 
       .hero-visual {
@@ -1213,7 +1215,7 @@
       <li><a href="#hakkimizda">Hakkımızda</a></li>
       <li><a href="#urunler">Ürünler</a></li>
       <li><a href="#uretim">Üretim</a></li>
-      <li><a href="#bilim">Bilim</a></li>
+      <li><a href="#bilim">Kalite Güvence</a></li>
       <li><a href="#b2b">Toplu Sipariş</a></li>
       <li><a href="#iletisim" class="nav-cta">İletişim</a></li>
       <li><a href="en.html" class="nav-lang">EN</a></li>
@@ -1384,8 +1386,8 @@
   <section id="bilim">
     <div class="bilim-grid">
       <div class="bilim-left">
-        <p class="section-label reveal">Bilim ve Güvence</p>
-        <h2 class="section-title reveal">Bağımsız <em>laboratuvar</em> doğrulaması</h2>
+        <p class="section-label reveal">Kalite Güvence</p>
+        <h2 class="section-title reveal">Bağımsız <em>laboratuvar</em> güvencesi</h2>
         <p class="reveal">
           Zeytinyağımız, TÜRKAK akreditasyonu ve uluslararası EA/ILAC anlaşmaları kapsamında AB genelinde geçerli olan Aydın Ticaret Borsası Özel Gıda Kontrol Laboratuvarı tarafından analiz edilmiştir. Tüm parametreler extra virgin sınıfını karşılamaktadır.
         </p>
@@ -1611,6 +1613,7 @@
     menuBtn.addEventListener('click', () => {
       navLinks.classList.toggle('open');
       const isOpen = navLinks.classList.contains('open');
+      document.body.classList.toggle('menu-open', isOpen);
       menuBtn.innerHTML = isOpen
         ? '<span style="transform:rotate(45deg) translate(5px,5px)"></span><span style="opacity:0"></span><span style="transform:rotate(-45deg) translate(5px,-5px)"></span>'
         : '<span></span><span></span><span></span>';
@@ -1619,6 +1622,7 @@
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
+        document.body.classList.remove('menu-open');
         menuBtn.innerHTML = '<span></span><span></span><span></span>';
       });
     });
