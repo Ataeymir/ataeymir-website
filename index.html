@@ -220,7 +220,10 @@
 
     /* ─── BİLİM VE GÜVENCE ───────────────────────────── */
     #bilim {
-      background: var(--brown);
+      background-color: var(--brown);
+      background-image: url('assets/lifestyle_750.webp');
+      background-size: cover;
+      background-position: center 40%;
       padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 8vw, 10rem);
       position: relative;
       overflow: hidden;
@@ -229,10 +232,9 @@
     #bilim::before {
       content: '';
       position: absolute;
-      top: -100px; right: -100px;
-      width: 500px; height: 500px;
-      border-radius: 50%;
-      border: 1px solid rgba(201,168,76,0.1);
+      inset: 0;
+      background: rgba(46,31,14,0.90);
+      z-index: 0;
     }
 
     .bilim-grid {
@@ -240,6 +242,8 @@
       grid-template-columns: 1fr 1fr;
       gap: 5rem;
       align-items: start;
+      position: relative;
+      z-index: 1;
     }
 
     .bilim-left .section-label { color: var(--gold); }
@@ -675,33 +679,37 @@
 
     .about-visual {
       background-color: var(--cream-dark);
-      background-image: url('assets/harvest.webp');
+      background-image: url('assets/lifestyle_1000.webp');
       background-size: cover;
-      background-position: center 30%;
+      background-position: center 40%;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
       overflow: hidden;
-      padding: 4rem;
+      padding: 4rem 4rem 12rem 4rem;
     }
 
     .about-visual::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(235,225,210,0.82);
+      background: rgba(235,225,210,0.72);
     }
 
     .about-visual::after {
-      content: '1920';
+      content: '"Bu nadide üründe beş kuşağın emeği var."';
       position: absolute;
-      bottom: 2rem; right: 2rem;
+      bottom: 2.5rem;
+      right: 2.5rem;
+      max-width: 18ch;
       font-family: Georgia, 'Times New Roman', serif;
-      font-size: clamp(5rem, 10vw, 12rem);
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
       font-weight: 300;
-      color: rgba(74,92,47,0.1);
-      line-height: 1;
+      font-style: italic;
+      color: rgba(74,92,47,0.78);
+      line-height: 1.25;
+      text-align: right;
     }
 
     .about-visual .stat-stack {
@@ -957,12 +965,26 @@
     /* ─── PROCESS ─────────────────────────────────────── */
     #uretim {
       padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 8vw, 10rem);
-      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+      background-image: url('assets/lifestyle_5000.webp');
+      background-size: cover;
+      background-position: center 30%;
+    }
+
+    #uretim::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(245,240,232,0.87);
+      z-index: 0;
     }
 
     .process-header {
       text-align: center;
       margin-bottom: 5rem;
+      position: relative;
+      z-index: 1;
     }
 
     .process-steps {
@@ -970,6 +992,7 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 0;
       position: relative;
+      z-index: 1;
     }
 
     .process-steps::before {
@@ -1158,6 +1181,26 @@
 
     footer a:hover { color: var(--gold-light); }
 
+    /* ─── LIFESTYLE STRIP ────────────────────────────── */
+    .lifestyle-strip {
+      width: 100%;
+      max-height: 520px;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .lifestyle-strip img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      object-position: center 35%;
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      .lifestyle-strip img { height: 320px; }
+    }
+
     /* ─── ANIMATIONS ──────────────────────────────────── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
@@ -1208,10 +1251,8 @@
 
       .about-visual {
         min-height: 280px;
-        padding: 3rem;
+        padding: 3rem 3rem 10rem 3rem;
       }
-
-      .about-visual::after { font-size: 6rem; }
 
       .process-steps {
         grid-template-columns: 1fr 1fr;

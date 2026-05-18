@@ -380,33 +380,37 @@
 
     .about-visual {
       background-color: var(--cream-dark);
-      background-image: url('assets/harvest.webp');
+      background-image: url('assets/lifestyle_1000.webp');
       background-size: cover;
-      background-position: center 30%;
+      background-position: center 40%;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
       overflow: hidden;
-      padding: 4rem;
+      padding: 4rem 4rem 12rem 4rem;
     }
 
     .about-visual::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(235,225,210,0.82);
+      background: rgba(235,225,210,0.72);
     }
 
     .about-visual::after {
-      content: '1920';
+      content: '"Five generations of craft in every drop."';
       position: absolute;
-      bottom: 2rem; right: 2rem;
+      bottom: 2.5rem;
+      right: 2.5rem;
+      max-width: 18ch;
       font-family: Georgia, 'Times New Roman', serif;
-      font-size: clamp(5rem, 10vw, 12rem);
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
       font-weight: 300;
-      color: rgba(74,92,47,0.1);
-      line-height: 1;
+      font-style: italic;
+      color: rgba(74,92,47,0.78);
+      line-height: 1.25;
+      text-align: right;
     }
 
     .about-text {
@@ -616,16 +620,34 @@
     /* ─── PROCESS ─────────────────────────────────────── */
     #process {
       padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 8vw, 10rem);
-      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+      background-image: url('assets/lifestyle_5000.webp');
+      background-size: cover;
+      background-position: center 30%;
     }
 
-    .process-header { text-align: center; margin-bottom: 5rem; }
+    #process::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(245,240,232,0.87);
+      z-index: 0;
+    }
+
+    .process-header {
+      text-align: center;
+      margin-bottom: 5rem;
+      position: relative;
+      z-index: 1;
+    }
 
     .process-steps {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 0;
       position: relative;
+      z-index: 1;
     }
 
     .process-steps::before {
@@ -673,7 +695,10 @@
 
     /* ─── SCIENCE & ASSURANCE ────────────────────────── */
     #science {
-      background: var(--brown);
+      background-color: var(--brown);
+      background-image: url('assets/lifestyle_750.webp');
+      background-size: cover;
+      background-position: center 40%;
       padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 8vw, 10rem);
       position: relative;
       overflow: hidden;
@@ -682,10 +707,9 @@
     #science::before {
       content: '';
       position: absolute;
-      top: -100px; right: -100px;
-      width: 500px; height: 500px;
-      border-radius: 50%;
-      border: 1px solid rgba(201,168,76,0.1);
+      inset: 0;
+      background: rgba(46,31,14,0.90);
+      z-index: 0;
     }
 
     .science-grid {
@@ -693,6 +717,8 @@
       grid-template-columns: 1fr 1fr;
       gap: 5rem;
       align-items: start;
+      position: relative;
+      z-index: 1;
     }
 
     .science-left .section-label { color: var(--gold); }
@@ -789,6 +815,8 @@
     @media (max-width: 900px) {
       .science-grid { grid-template-columns: 1fr; gap: 3rem; }
     }
+
+    #wholesale {
       background: var(--cream-dark);
       padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 8vw, 10rem);
     }
@@ -1029,8 +1057,7 @@
       .hero-visual .logo-center img { width: clamp(130px, 42vw, 190px) !important; }
       .hero-content::before { display: none; }
       #about { grid-template-columns: 1fr; }
-      .about-visual { min-height: 280px; padding: 3rem; }
-      .about-visual::after { font-size: 6rem; }
+      .about-visual { min-height: 280px; padding: 3rem 3rem 10rem 3rem; }
       .process-steps { grid-template-columns: 1fr 1fr; gap: 3rem; }
       .process-steps::before { display: none; }
       #contact { grid-template-columns: 1fr; }
