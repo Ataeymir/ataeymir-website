@@ -29,7 +29,7 @@
     .nav-lang:hover{background:var(--olive)!important;color:var(--cream)!important;} .nav-lang::after{display:none!important;}
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
     .hamburger span{display:block;width:24px;height:2px;background:var(--brown);transition:all 0.3s;}
-    .article-hero{background:var(--cream-dark);padding:clamp(2.5rem,5vw,5rem) clamp(1.5rem,8vw,14rem);border-bottom:1px solid rgba(74,92,47,0.12);min-height:420px;display:flex;flex-direction:column;justify-content:center;}
+    .article-hero{background:var(--cream-dark);padding:5rem clamp(1.5rem,8vw,14rem);border-bottom:1px solid rgba(74,92,47,0.12);height:520px;display:flex;flex-direction:column;justify-content:center;overflow:hidden;}
     .article-meta{font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--olive-mid);margin-bottom:1.25rem;}
     .article-meta a{color:var(--olive-mid);text-decoration:none;} .article-meta a:hover{color:var(--olive);}
     .article-title{font-size:clamp(2rem,4vw,3.4rem);font-weight:300;line-height:1.15;color:var(--brown);margin-bottom:1.5rem;max-width:800px;}
@@ -37,6 +37,8 @@
     .article-lead{font-size:clamp(1.05rem,1.8vw,1.2rem);color:var(--brown-mid);max-width:680px;line-height:1.75;font-style:italic;margin-bottom:1rem;}
     .lang-notice{font-size:0.78rem;color:var(--olive-mid);}
     .lang-notice a{color:var(--olive);text-decoration:none;} .lang-notice a:hover{text-decoration:underline;}
+    .hero-photo{width:100%;height:58vh;overflow:hidden;}
+    .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;}
     .article-body{max-width:720px;margin:0 auto;padding:clamp(1.75rem,3vw,2.75rem) clamp(1.5rem,5vw,2rem);}
     .article-body h2{font-size:clamp(1.3rem,2.2vw,1.65rem);font-weight:300;color:var(--brown);margin:2rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid rgba(74,92,47,0.15);}
     .article-body h2 em{font-style:italic;color:var(--olive);}
@@ -102,6 +104,10 @@
     <p class="lang-notice">Türkçe okumak için <a href="/blog/zeytinyaginda-polifenol-nedir.html">buraya tıklayın →</a></p>
   </div>
 
+  <div class="hero-photo">
+    <img src="blog-polyphenol-3.webp" alt="Olive oil" />
+  </div>
+
   <article class="article-body">
     <h2>Acidity is only part of the story</h2>
     <p>When most people pick up a bottle of olive oil, the first thing they check is the acidity level. A reading of 0.3% or 0.5% signals quality — and that instinct isn't wrong. But it is incomplete.</p>
@@ -164,15 +170,6 @@
     <p>Polyphenol content cannot be reliably determined by taste alone; laboratory analysis is required. Results are reported in mg/kg.</p>
     <p>Method matters. HPLC (High-Performance Liquid Chromatography) analysis identifies individual phenolic compounds separately and is the most reliable approach. Reports listing only a "total polyphenols" figure derived from simpler tests can be misleading.</p>
   </article>
-
-  <div class="photo-break photo-break-3" style="background-image: url('blog-polyphenol-3.webp'); background-position: center 15%;">
-    <div class="photo-break-inner">
-      <div class="photo-break-text">
-        <span class="photo-break-label">Quality · Transparency</span>
-        <p class="photo-break-quote">250 mg/kg is the minimum threshold EFSA established from clinical evidence. A genuinely high-phenolic oil exceeds it — and can prove it.</p>
-      </div>
-    </div>
-  </div>
 
   <article class="article-body">
     <h2>What to look for when buying</h2>

@@ -66,12 +66,13 @@
     /* ─── HERO ─────────────────────────────────────── */
     .article-hero {
       background: var(--cream-dark);
-      padding: clamp(2.5rem, 5vw, 5rem) clamp(1.5rem, 8vw, 14rem);
+      padding: 5rem clamp(1.5rem, 8vw, 14rem);
       border-bottom: 1px solid rgba(74,92,47,0.12);
-      min-height: 420px;
+      height: 520px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      overflow: hidden;
     }
     .article-meta { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--olive-mid); margin-bottom: 1.25rem; }
     .article-meta a { color: var(--olive-mid); text-decoration: none; }
@@ -82,6 +83,9 @@
     .lang-notice { font-size: 0.78rem; color: var(--olive-mid); }
     .lang-notice a { color: var(--olive); text-decoration: none; }
     .lang-notice a:hover { text-decoration: underline; }
+
+    .hero-photo { width: 100%; height: 58vh; overflow: hidden; }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; }
 
     /* ─── ARTICLE BODY ──────────────────────────────── */
     .article-body { max-width: 720px; margin: 0 auto; padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 2rem); }
@@ -191,6 +195,10 @@
     <p class="lang-notice">Also available in <a href="/blog/polyphenols-in-olive-oil.html">English →</a></p>
   </div>
 
+  <div class="hero-photo">
+    <img src="blog-polyphenol-3.webp" alt="Zeytinyağı" />
+  </div>
+
   <article class="article-body">
 
     <h2>Asitlik tek başına yetmez</h2>
@@ -262,16 +270,6 @@
     <p>Yöntem de önemlidir. HPLC (Yüksek Performanslı Sıvı Kromatografisi) ile yapılan analizler, faydalı bileşikleri tek tek gösterdiği için en güvenilir olanıdır. Sadece "toplam polifenol" ifadesi geçen basit testler yanıltıcı olabilir; analiz yöntemini sormak, bilinçli bir tüketici için mantıklı bir adımdır.</p>
 
   </article>
-
-  <!-- FOTOĞRAF 3: Eller ve yağ kasesi -->
-  <div class="photo-break photo-break-3" style="background-image: url('blog-polyphenol-3.webp'); background-position: center 15%;">
-    <div class="photo-break-inner">
-      <div class="photo-break-text">
-        <span class="photo-break-label">Kalite · Şeffaflık</span>
-        <p class="photo-break-quote">250 mg/kg; EFSA'nın bilimsel kanıtlarla belirlediği minimum eşik. Gerçek yüksek polifenollü yağ bu sınırı belgelenmiş biçimde aşar.</p>
-      </div>
-    </div>
-  </div>
 
   <article class="article-body">
 
