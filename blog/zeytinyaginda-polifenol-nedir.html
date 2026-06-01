@@ -68,7 +68,7 @@
       background: var(--cream-dark);
       padding: clamp(2.5rem, 5vw, 5rem) clamp(1.5rem, 8vw, 14rem);
       border-bottom: 1px solid rgba(74,92,47,0.12);
-      min-height: 260px;
+      min-height: 420px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -101,39 +101,32 @@
       min-height: 48vh; display: flex; align-items: center;
       margin: 2rem 0;
     }
-    .photo-break::before {
-      content: ''; position: absolute; inset: 0;
-    }
-    /* Fotoğraf 1: soldan sağa gradient, metin sol tarafta */
+    .photo-break::before { content: ''; position: absolute; inset: 0; }
     .photo-break-1::before {
-      background: linear-gradient(to right, rgba(46,31,14,0.82) 0%, rgba(46,31,14,0.65) 40%, rgba(46,31,14,0.18) 100%);
+      background: linear-gradient(to right, rgba(245,240,232,0.96) 0%, rgba(245,240,232,0.82) 45%, rgba(245,240,232,0.0) 75%);
     }
-    /* Fotoğraf 2: sağdan sola gradient, metin sağ tarafta */
     .photo-break-2::before {
-      background: linear-gradient(to left, rgba(46,31,14,0.82) 0%, rgba(46,31,14,0.65) 40%, rgba(46,31,14,0.18) 100%);
+      background: linear-gradient(to left, rgba(245,240,232,0.96) 0%, rgba(245,240,232,0.82) 45%, rgba(245,240,232,0.0) 75%);
     }
-    /* Fotoğraf 3: merkez overlay */
-    .photo-break-3::before {
-      background: rgba(46,31,14,0.62);
-    }
-    .photo-break-inner {
-      position: relative; z-index: 1; padding: 3rem 6vw;
-      width: 100%; display: flex;
-    }
+    .photo-break-3::before { display: none; }
+    .photo-break-inner { position: relative; z-index: 1; padding: 3rem 6vw; width: 100%; display: flex; }
     .photo-break-1 .photo-break-inner { justify-content: flex-start; }
     .photo-break-2 .photo-break-inner { justify-content: flex-end; }
     .photo-break-3 .photo-break-inner { justify-content: center; }
-    .photo-break-text {
-      max-width: 520px;
+    .photo-break-text { max-width: 480px; }
+    .photo-break-3 .photo-break-text {
+      text-align: center; max-width: 600px;
+      background: rgba(245,240,232,0.90);
+      padding: 2.25rem 3rem;
+      backdrop-filter: blur(3px);
     }
-    .photo-break-3 .photo-break-text { text-align: center; max-width: 640px; }
     .photo-break-label {
       font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--gold-light); margin-bottom: 0.75rem; display: block;
+      color: var(--olive); margin-bottom: 0.75rem; display: block;
     }
     .photo-break-quote {
-      font-size: clamp(1.15rem, 2.2vw, 1.6rem); font-style: italic;
-      font-weight: 300; color: var(--cream); line-height: 1.45;
+      font-size: clamp(1.1rem, 2vw, 1.5rem); font-style: italic;
+      font-weight: 300; color: var(--brown); line-height: 1.5;
     }
 
     /* ─── FOOTER ────────────────────────────────────── */
@@ -163,7 +156,8 @@
       .nav-links.open a { font-size: 1.1rem; }
       body.menu-open { overflow: hidden; position: fixed; width: 100%; }
       .photo-break { min-height: 40vh; }
-      .photo-break-1::before, .photo-break-2::before { background: rgba(46,31,14,0.72); }
+      .photo-break-1::before { background: rgba(245,240,232,0.92); }
+      .photo-break-2::before { background: rgba(245,240,232,0.92); }
       .photo-break-1 .photo-break-inner, .photo-break-2 .photo-break-inner { justify-content: center; }
       .photo-break-text { max-width: 90%; text-align: center; }
     }

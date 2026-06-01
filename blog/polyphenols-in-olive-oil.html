@@ -29,7 +29,7 @@
     .nav-lang:hover{background:var(--olive)!important;color:var(--cream)!important;} .nav-lang::after{display:none!important;}
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
     .hamburger span{display:block;width:24px;height:2px;background:var(--brown);transition:all 0.3s;}
-    .article-hero{background:var(--cream-dark);padding:clamp(2.5rem,5vw,5rem) clamp(1.5rem,8vw,14rem);border-bottom:1px solid rgba(74,92,47,0.12);min-height:260px;display:flex;flex-direction:column;justify-content:center;}
+    .article-hero{background:var(--cream-dark);padding:clamp(2.5rem,5vw,5rem) clamp(1.5rem,8vw,14rem);border-bottom:1px solid rgba(74,92,47,0.12);min-height:420px;display:flex;flex-direction:column;justify-content:center;}
     .article-meta{font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--olive-mid);margin-bottom:1.25rem;}
     .article-meta a{color:var(--olive-mid);text-decoration:none;} .article-meta a:hover{color:var(--olive);}
     .article-title{font-size:clamp(2rem,4vw,3.4rem);font-weight:300;line-height:1.15;color:var(--brown);margin-bottom:1.5rem;max-width:800px;}
@@ -48,17 +48,17 @@
     .data-note strong{color:var(--olive);}
     .photo-break{width:100vw;position:relative;left:50%;transform:translateX(-50%);background-size:cover;background-position:center;min-height:48vh;display:flex;align-items:center;margin:2rem 0;}
     .photo-break::before{content:'';position:absolute;inset:0;}
-    .photo-break-1::before{background:linear-gradient(to right,rgba(46,31,14,0.82) 0%,rgba(46,31,14,0.65) 40%,rgba(46,31,14,0.18) 100%);}
-    .photo-break-2::before{background:linear-gradient(to left,rgba(46,31,14,0.82) 0%,rgba(46,31,14,0.65) 40%,rgba(46,31,14,0.18) 100%);}
-    .photo-break-3::before{background:rgba(46,31,14,0.62);}
+    .photo-break-1::before{background:linear-gradient(to right,rgba(245,240,232,0.96) 0%,rgba(245,240,232,0.82) 45%,rgba(245,240,232,0.0) 75%);}
+    .photo-break-2::before{background:linear-gradient(to left,rgba(245,240,232,0.96) 0%,rgba(245,240,232,0.82) 45%,rgba(245,240,232,0.0) 75%);}
+    .photo-break-3::before{display:none;}
     .photo-break-inner{position:relative;z-index:1;padding:3rem 6vw;width:100%;display:flex;}
     .photo-break-1 .photo-break-inner{justify-content:flex-start;}
     .photo-break-2 .photo-break-inner{justify-content:flex-end;}
     .photo-break-3 .photo-break-inner{justify-content:center;}
-    .photo-break-text{max-width:520px;}
-    .photo-break-3 .photo-break-text{text-align:center;max-width:640px;}
-    .photo-break-label{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-light);margin-bottom:0.75rem;display:block;}
-    .photo-break-quote{font-size:clamp(1.15rem,2.2vw,1.6rem);font-style:italic;font-weight:300;color:var(--cream);line-height:1.45;}
+    .photo-break-text{max-width:480px;}
+    .photo-break-3 .photo-break-text{text-align:center;max-width:600px;background:rgba(245,240,232,0.90);padding:2.25rem 3rem;backdrop-filter:blur(3px);}
+    .photo-break-label{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--olive);margin-bottom:0.75rem;display:block;}
+    .photo-break-quote{font-size:clamp(1.1rem,2vw,1.5rem);font-style:italic;font-weight:300;color:var(--brown);line-height:1.5;}
     .article-footer{max-width:720px;margin:0 auto;padding:2.5rem clamp(1.5rem,5vw,2rem) 4rem;border-top:1px solid rgba(74,92,47,0.12);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
     .back-link{color:var(--olive);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;}
     .back-link:hover{color:var(--brown);}
@@ -71,7 +71,7 @@
       .nav-links.open{display:flex;flex-direction:column;position:fixed;top:0;left:0;width:100vw;height:100vh;background:#fefcf8;align-items:center;justify-content:center;gap:2.5rem;z-index:300;}
       .nav-links.open a{font-size:1.1rem;} body.menu-open{overflow:hidden;position:fixed;width:100%;}
       .photo-break{min-height:40vh;}
-      .photo-break-1::before,.photo-break-2::before{background:rgba(46,31,14,0.72);}
+      .photo-break-1::before,.photo-break-2::before{background:rgba(245,240,232,0.92);}
       .photo-break-1 .photo-break-inner,.photo-break-2 .photo-break-inner{justify-content:center;}
       .photo-break-text{max-width:90%;text-align:center;}
     }
