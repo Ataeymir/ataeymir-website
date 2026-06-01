@@ -65,15 +65,31 @@
 
     /* ─── HERO ─────────────────────────────────────── */
     .article-hero {
-      background: var(--cream-dark);
-      padding: 5rem clamp(1.5rem, 8vw, 14rem);
-      border-bottom: 1px solid rgba(74,92,47,0.12);
+      background-color: var(--cream-dark);
+      background-image: url('blog-polyphenol-3.webp');
+      background-size: cover;
+      background-position: center 15%;
       height: 520px;
+      padding: 80px clamp(1.5rem, 8vw, 14rem) 3rem;
+      position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       overflow: hidden;
     }
+    .article-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right,
+        rgba(237,229,212,0.98) 0%,
+        rgba(237,229,212,0.93) 38%,
+        rgba(237,229,212,0.55) 62%,
+        rgba(237,229,212,0.0) 100%
+      );
+      z-index: 0;
+    }
+    .article-hero > * { position: relative; z-index: 1; }
     .article-meta { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--olive-mid); margin-bottom: 1.25rem; }
     .article-meta a { color: var(--olive-mid); text-decoration: none; }
     .article-meta a:hover { color: var(--olive); }
@@ -83,9 +99,6 @@
     .lang-notice { font-size: 0.78rem; color: var(--olive-mid); }
     .lang-notice a { color: var(--olive); text-decoration: none; }
     .lang-notice a:hover { text-decoration: underline; }
-
-    .hero-photo { width: 100%; height: 58vh; overflow: hidden; }
-    .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; }
 
     /* ─── ARTICLE BODY ──────────────────────────────── */
     .article-body { max-width: 720px; margin: 0 auto; padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 2rem); }
@@ -193,10 +206,6 @@
     <h1 class="article-title">Zeytinyağında <em>polifenol</em> nedir?</h1>
     <p class="article-lead">Zeytinyağında kaliteyi yalnızca asitlik oranına bakarak anlamak, resmin bütününü kaçırmak demektir. Asıl farkı yaratan; hasat zamanı, sıkım sıcaklığı ve yağın içindeki küçük ama son derece etkili moleküllerdir.</p>
     <p class="lang-notice">Also available in <a href="/blog/polyphenols-in-olive-oil.html">English →</a></p>
-  </div>
-
-  <div class="hero-photo">
-    <img src="blog-polyphenol-3.webp" alt="Zeytinyağı" />
   </div>
 
   <article class="article-body">

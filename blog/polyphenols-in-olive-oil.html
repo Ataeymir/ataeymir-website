@@ -29,7 +29,9 @@
     .nav-lang:hover{background:var(--olive)!important;color:var(--cream)!important;} .nav-lang::after{display:none!important;}
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
     .hamburger span{display:block;width:24px;height:2px;background:var(--brown);transition:all 0.3s;}
-    .article-hero{background:var(--cream-dark);padding:5rem clamp(1.5rem,8vw,14rem);border-bottom:1px solid rgba(74,92,47,0.12);height:520px;display:flex;flex-direction:column;justify-content:center;overflow:hidden;}
+    .article-hero{background-color:var(--cream-dark);background-image:url('blog-polyphenol-3.webp');background-size:cover;background-position:center 15%;height:520px;padding:80px clamp(1.5rem,8vw,14rem) 3rem;position:relative;display:flex;flex-direction:column;justify-content:flex-start;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(237,229,212,0.98) 0%,rgba(237,229,212,0.93) 38%,rgba(237,229,212,0.55) 62%,rgba(237,229,212,0.0) 100%);z-index:0;}
+    .article-hero>*{position:relative;z-index:1;}
     .article-meta{font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--olive-mid);margin-bottom:1.25rem;}
     .article-meta a{color:var(--olive-mid);text-decoration:none;} .article-meta a:hover{color:var(--olive);}
     .article-title{font-size:clamp(2rem,4vw,3.4rem);font-weight:300;line-height:1.15;color:var(--brown);margin-bottom:1.5rem;max-width:800px;}
@@ -37,8 +39,6 @@
     .article-lead{font-size:clamp(1.05rem,1.8vw,1.2rem);color:var(--brown-mid);max-width:680px;line-height:1.75;font-style:italic;margin-bottom:1rem;}
     .lang-notice{font-size:0.78rem;color:var(--olive-mid);}
     .lang-notice a{color:var(--olive);text-decoration:none;} .lang-notice a:hover{text-decoration:underline;}
-    .hero-photo{width:100%;height:58vh;overflow:hidden;}
-    .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;}
     .article-body{max-width:720px;margin:0 auto;padding:clamp(1.75rem,3vw,2.75rem) clamp(1.5rem,5vw,2rem);}
     .article-body h2{font-size:clamp(1.3rem,2.2vw,1.65rem);font-weight:300;color:var(--brown);margin:2rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid rgba(74,92,47,0.15);}
     .article-body h2 em{font-style:italic;color:var(--olive);}
@@ -102,10 +102,6 @@
     <h1 class="article-title">What are <em>polyphenols</em> in olive oil?</h1>
     <p class="article-lead">Judging olive oil by its acidity alone means missing most of the picture. What really sets oils apart is harvest timing, pressing temperature, and a handful of remarkably active molecules.</p>
     <p class="lang-notice">Türkçe okumak için <a href="/blog/zeytinyaginda-polifenol-nedir.html">buraya tıklayın →</a></p>
-  </div>
-
-  <div class="hero-photo">
-    <img src="blog-polyphenol-3.webp" alt="Olive oil" />
   </div>
 
   <article class="article-body">
