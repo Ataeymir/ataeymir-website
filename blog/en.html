@@ -6,66 +6,77 @@
   <title>Blog | Ataeymir</title>
   <meta name="description" content="Readings on olive oil, polyphenols, harvest and production from Ataeymir." />
   <link rel="canonical" href="https://www.ataeymir.com.tr/blog/en.html" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYYB0YGPQY"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYYB0YGPQY');</script>
   <style>
-    :root { --olive: #4a5c2f; --olive-mid: #6b7d45; --gold: #c9a84c; --gold-light: #e2c47a; --cream: #f5f0e8; --cream-dark: #ede5d4; --brown: #2e1f0e; --brown-mid: #5c3d1e; --white: #fefcf8; }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 16px; }
-    body { font-family: Georgia, 'Times New Roman', serif; background: var(--white); color: var(--brown); line-height: 1.8; }
-    .nav { background: var(--olive); padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo img { height: 36px; filter: brightness(0) invert(1); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; }
-    .nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
-    .blog-hero { background: var(--cream-dark); padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 8vw, 14rem); border-bottom: 1px solid rgba(74,92,47,0.12); }
-    .blog-label { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--olive-mid); margin-bottom: 1rem; }
-    .blog-hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--brown); }
-    .blog-hero h1 em { font-style: italic; color: var(--olive); }
-    .blog-hero p { margin-top: 1rem; color: var(--brown-mid); max-width: 560px; font-style: italic; }
-    .lang-switch { display: inline-block; margin-top: 0.75rem; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--olive-mid); text-decoration: none; }
-    .lang-switch:hover { color: var(--olive); }
-    .blog-grid { max-width: 900px; margin: 0 auto; padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 2rem); display: grid; gap: 2.5rem; }
-    .blog-card {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 2rem;
-      align-items: start; border-bottom: 1px solid rgba(74,92,47,0.12); padding-bottom: 2.5rem; }
-    .blog-card:last-child { border-bottom: none; }
-    .blog-card-meta { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--olive-mid); margin-bottom: 0.75rem; }
-    .blog-card h2 { font-size: clamp(1.2rem, 2.2vw, 1.55rem); font-weight: 300; margin-bottom: 0.75rem; line-height: 1.3; }
-    .blog-card h2 a { color: var(--brown); text-decoration: none; }
-    .blog-card h2 a:hover { color: var(--olive); }
-    .blog-card p { color: var(--brown-mid); font-size: 1rem; margin-bottom: 1rem; max-width: 640px; }
-    .read-more { color: var(--olive); text-decoration: none; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; }
-    .blog-card-thumb { display: block; overflow: hidden; aspect-ratio: 4/3; }
-    .blog-card-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
-    .blog-card-thumb:hover img { transform: scale(1.03); }
-    .blog-card-body { display: flex; flex-direction: column; gap: 0.75rem; }
-    .read-more:hover { color: var(--brown); }
-    footer { background: var(--brown); color: rgba(255,255,255,0.65); text-align: center; padding: 2rem; font-size: 0.8rem; }
-    footer a { color: var(--gold-light); text-decoration: none; }
-    @media (max-width: 700px) { .nav-links { display: none; } .blog-card { grid-template-columns: 1fr; } }
+    :root{--olive:#4a5c2f;--olive-mid:#6b7d45;--olive-light:#5a7038;--gold:#c9a84c;--gold-light:#e2c47a;--cream:#f5f0e8;--cream-dark:#ede5d4;--brown:#2e1f0e;--brown-mid:#5c3d1e;--white:#fefcf8;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{font-size:16px;}
+    body{font-family:Georgia,'Times New Roman',serif;background:var(--white);color:var(--brown);line-height:1.8;overflow-x:hidden;padding-top:80px;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 4vw;background:rgba(254,252,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(74,92,47,0.12);}
+    .nav-logo img{height:52px;}
+    .nav-links{display:flex;gap:2.5rem;list-style:none;}
+    .nav-links a{text-decoration:none;color:var(--brown);font-size:0.78rem;letter-spacing:0.15em;text-transform:uppercase;position:relative;transition:color 0.3s;}
+    .nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s;}
+    .nav-links a:hover{color:var(--olive);} .nav-links a:hover::after{width:100%;}
+    .nav-links a.active{color:var(--olive);} .nav-links a.active::after{width:100%;}
+    .nav-cta{background:var(--olive);color:var(--cream)!important;padding:0.55rem 1.4rem;border-radius:2px;}
+    .nav-cta:hover{background:var(--olive-light);color:var(--cream)!important;} .nav-cta::after{display:none!important;}
+    .nav-lang{border:1px solid var(--olive)!important;color:var(--olive)!important;padding:0.35rem 0.8rem!important;border-radius:2px;font-size:0.72rem!important;letter-spacing:0.15em;}
+    .nav-lang:hover{background:var(--olive)!important;color:var(--cream)!important;} .nav-lang::after{display:none!important;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--brown);transition:all 0.3s;}
+    .blog-hero{background:var(--cream-dark);padding:clamp(3rem,6vw,5rem) clamp(1.5rem,8vw,14rem);border-bottom:1px solid rgba(74,92,47,0.12);}
+    .blog-label{font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--olive-mid);margin-bottom:1rem;}
+    .blog-hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--brown);}
+    .blog-hero h1 em{font-style:italic;color:var(--olive);}
+    .blog-hero p{margin-top:1rem;color:var(--brown-mid);max-width:560px;font-style:italic;}
+    .blog-grid{max-width:900px;margin:0 auto;padding:clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,2rem);display:grid;gap:3rem;}
+    .blog-card{border-bottom:1px solid rgba(74,92,47,0.12);padding-bottom:3rem;display:grid;grid-template-columns:280px 1fr;gap:2rem;align-items:start;}
+    .blog-card:last-child{border-bottom:none;}
+    .blog-card-thumb{display:block;overflow:hidden;aspect-ratio:4/3;}
+    .blog-card-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease;}
+    .blog-card-thumb:hover img{transform:scale(1.04);}
+    .blog-card-body{display:flex;flex-direction:column;gap:0.75rem;padding-top:0.25rem;}
+    .blog-card-meta{font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--olive-mid);}
+    .blog-card h2{font-size:clamp(1.2rem,2.2vw,1.55rem);font-weight:300;line-height:1.3;}
+    .blog-card h2 a{color:var(--brown);text-decoration:none;}
+    .blog-card h2 a:hover{color:var(--olive);}
+    .blog-card p{color:var(--brown-mid);font-size:1rem;max-width:540px;}
+    .read-more{color:var(--olive);text-decoration:none;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;margin-top:0.25rem;}
+    .read-more:hover{color:var(--brown);}
+    footer{background:var(--brown);color:rgba(255,255,255,0.65);text-align:center;padding:2rem;font-size:0.8rem;}
+    footer a{color:var(--gold-light);text-decoration:none;}
+    @media(max-width:900px){
+      .nav-links{display:none;} .hamburger{display:flex;z-index:301;position:relative;}
+      .nav-links.open{display:flex;flex-direction:column;position:fixed;top:0;left:0;width:100vw;height:100vh;background:#fefcf8;align-items:center;justify-content:center;gap:2.5rem;z-index:300;}
+      .nav-links.open a{font-size:1.1rem;} body.menu-open{overflow:hidden;position:fixed;width:100%;}
+      .blog-card{grid-template-columns:1fr;}
+    }
   </style>
 </head>
 <body>
-
-  <nav class="nav">
-    <a href="/en.html" class="nav-logo"><img src="../assets/logo.png" alt="Ataeymir" /></a>
-    <ul class="nav-links">
+  <nav>
+    <a class="nav-logo" href="/en.html"><img src="../assets/logo.png" alt="Ataeymir Logo" /></a>
+    <ul class="nav-links" id="navLinks">
       <li><a href="/en.html#about">About</a></li>
       <li><a href="/en.html#products">Products</a></li>
       <li><a href="/en.html#process">Process</a></li>
       <li><a href="/en.html#science">Quality</a></li>
       <li><a href="/blog/en.html" class="active">Blog</a></li>
       <li><a href="/en.html#wholesale">Wholesale</a></li>
-      <li><a href="/">TR</a></li>
+      <li><a href="/en.html#contact" class="nav-cta">Contact</a></li>
+      <li><a href="/blog/" class="nav-lang">TR</a></li>
     </ul>
+    <button class="hamburger" id="menuBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
   <div class="blog-hero">
     <p class="blog-label">Ataeymir Blog</p>
     <h1>Readings on <em>olive oil</em></h1>
     <p>On production, science and the table.</p>
-    <a href="/blog/" class="lang-switch">Türkçe →</a>
   </div>
 
   <div class="blog-grid">
@@ -86,6 +97,10 @@
     <p>© 2026 Ataeymir Tarım Tekstil Sanayi ve Ticaret Limited Şirketi &nbsp;·&nbsp;
     <a href="/en.html">ataeymir.com.tr</a></p>
   </footer>
-
+  <script>
+    const menuBtn=document.getElementById('menuBtn');const navLinks=document.getElementById('navLinks');
+    menuBtn.addEventListener('click',()=>{navLinks.classList.toggle('open');const isOpen=navLinks.classList.contains('open');document.body.classList.toggle('menu-open',isOpen);menuBtn.innerHTML=isOpen?'<span style="transform:rotate(45deg) translate(5px,5px)"></span><span style="opacity:0"></span><span style="transform:rotate(-45deg) translate(5px,-5px)"></span>':'<span></span><span></span><span></span>';});
+    navLinks.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{navLinks.classList.remove('open');document.body.classList.remove('menu-open');menuBtn.innerHTML='<span></span><span></span><span></span>';});});
+  </script>
 </body>
 </html>
