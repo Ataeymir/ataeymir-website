@@ -32,13 +32,34 @@
     .blog-card p{color:var(--brown-mid);font-size:1rem;max-width:540px;}
     .read-more{color:var(--olive);text-decoration:none;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;margin-top:0.25rem;}
     .read-more:hover{color:var(--brown);}
-    footer{background:var(--brown);color:rgba(255,255,255,0.65);text-align:center;padding:2rem;font-size:0.8rem;}
-    footer a{color:var(--gold-light);text-decoration:none;}
+    footer{background:#2e1f0e;padding:2rem clamp(2rem,6vw,6rem);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
     @media(max-width:900px){
       .blog-card{grid-template-columns:1fr;}
     }
+  
+    /* === ATAEYMIR NAV === */
+    nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:19px 3.5vw;background:rgba(254,252,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(74,92,47,0.12);line-height:1;}
+    .nav-logo img{height:52px;}
+    .nav-links{display:flex;gap:29px;list-style:none;}
+    .nav-links a{text-decoration:none;color:#2e1f0e;font-size:12.5px;letter-spacing:0.15em;text-transform:uppercase;font-weight:400;position:relative;transition:color 0.3s;line-height:1;}
+    .nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:#c9a84c;transition:width 0.3s;}
+    .nav-links a:hover,.nav-links a.active{color:#4a5c2f;}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .nav-cta{background:#4a5c2f;color:#f5f0e8!important;padding:9px 22px;border-radius:2px;}
+    .nav-cta:hover{background:#5a7038;}
+    .nav-cta::after,.nav-lang::after{display:none!important;}
+    .nav-lang{border:1px solid #4a5c2f!important;color:#4a5c2f!important;padding:5px 13px!important;border-radius:2px;font-size:11.5px!important;letter-spacing:0.15em;}
+    .nav-lang:hover{background:#4a5c2f!important;color:#f5f0e8!important;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+    .hamburger span{display:block;width:24px;height:2px;background:#2e1f0e;transition:all 0.3s;}
+    @media(max-width:900px){
+      .nav-links{display:none;}
+      .hamburger{display:flex;z-index:301;position:relative;}
+      .nav-links.open{display:flex!important;flex-direction:column;position:fixed;top:0;left:0;width:100vw;height:100vh;background:#fefcf8;align-items:center;justify-content:center;gap:28px;z-index:300;overflow-y:auto;padding:48px 0;}
+      .nav-links.open a{font-size:16px;}
+      body.menu-open{overflow:hidden;position:fixed;width:100%;}
+    }
   </style>
-  <link rel="stylesheet" href="../assets/nav.css" />
 </head>
 <body>
   <nav>
@@ -78,15 +99,29 @@
     </div>
   </div>
 
-  <footer>
-    <p>© 2026 Ataeymir Tarım Tekstil Sanayi ve Ticaret Limited Şirketi &nbsp;·&nbsp;
-    <a href="/">ataeymir.com.tr</a></p>
+    <footer>
+    <p>© 2026 Ataeymir Tarım Tekstil Sanayi ve Ticaret Limited Şirketi</p>
+    <a href="mailto:bilgi@ataeymir.com.tr">bilgi@ataeymir.com.tr</a>
   </footer>
-  <script>
-  const menuBtn=document.getElementById('menuBtn');const navLinks=document.getElementById('navLinks');
-    menuBtn.addEventListener('click',()=>{navLinks.classList.toggle('open');const isOpen=navLinks.classList.contains('open');document.body.classList.toggle('menu-open',isOpen);menuBtn.innerHTML=isOpen?'<span style="transform:rotate(45deg) translate(5px,5px)"></span><span style="opacity:0"></span><span style="transform:rotate(-45deg) translate(5px,-5px)"></span>':'<span></span><span></span><span></span>';});
-    navLinks.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{navLinks.classList.remove('open');document.body.classList.remove('menu-open');menuBtn.innerHTML='<span></span><span></span><span></span>';});});
-  </script>
-  <script src="../assets/nav.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn');
+  var links=document.getElementById('navLinks');
+  if(!btn||!links)return;
+  btn.addEventListener('click',function(){
+    links.classList.toggle('open');
+    var o=links.classList.contains('open');
+    document.body.classList.toggle('menu-open',o);
+    btn.innerHTML=o?'<span style="transform:rotate(45deg) translate(5px,5px)"></span><span style="opacity:0"></span><span style="transform:rotate(-45deg) translate(5px,-5px)"></span>':'<span></span><span></span><span></span>';
+  });
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      links.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      btn.innerHTML='<span></span><span></span><span></span>';
+    });
+  });
+})();
+</script>
 </body>
 </html>
