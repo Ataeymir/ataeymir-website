@@ -1,13 +1,7 @@
 /* ─── ATAEYMIR SHARED NAV JS ─────────────────────────── */
 (function () {
-  var nav     = document.querySelector('nav');
-  var menuBtn = document.getElementById('menuBtn');
+  var menuBtn  = document.getElementById('menuBtn');
   var navLinks = document.getElementById('navLinks');
-
-  /* Scroll: nav küçülür */
-  window.addEventListener('scroll', function () {
-    nav.style.padding = window.scrollY > 50 ? '0.7rem 4vw' : '1.2rem 4vw';
-  });
 
   /* Hamburger aç/kapat */
   menuBtn.addEventListener('click', function () {
