@@ -19,5 +19,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://www.ataeymir.com.tr/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ataeymir.com.tr/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ataeymir.com.tr/blog/en.html"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ataeymir.com.tr/blog/en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ataeymir.com.tr/blog/en.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ataeymir.com.tr/blog/"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ataeymir.com.tr/blog/zeytinyaginda-polifenol-nedir.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ataeymir.com.tr/blog/zeytinyaginda-polifenol-nedir.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ataeymir.com.tr/blog/polyphenols-in-olive-oil.html"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ataeymir.com.tr/blog/polyphenols-in-olive-oil.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ataeymir.com.tr/blog/polyphenols-in-olive-oil.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ataeymir.com.tr/blog/zeytinyaginda-polifenol-nedir.html"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
 </urlset>
