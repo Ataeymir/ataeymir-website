@@ -66,8 +66,12 @@
     /* ─── HERO ─────────────────────────────────────── */
     .article-hero {
       background: var(--cream-dark);
-      padding: clamp(3rem, 6vw, 6rem) clamp(1.5rem, 8vw, 14rem);
+      padding: clamp(2.5rem, 5vw, 5rem) clamp(1.5rem, 8vw, 14rem);
       border-bottom: 1px solid rgba(74,92,47,0.12);
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     .article-meta { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--olive-mid); margin-bottom: 1.25rem; }
     .article-meta a { color: var(--olive-mid); text-decoration: none; }
@@ -81,9 +85,10 @@
 
     /* ─── ARTICLE BODY ──────────────────────────────── */
     .article-body { max-width: 720px; margin: 0 auto; padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 2rem); }
-    .article-body h2 { font-size: clamp(1.3rem, 2.2vw, 1.65rem); font-weight: 300; color: var(--brown); margin: 3rem 0 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(74,92,47,0.15); }
+    .article-body h2 { font-size: clamp(1.3rem, 2.2vw, 1.65rem); font-weight: 300; color: var(--brown); margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(74,92,47,0.15); }
     .article-body h2 em { font-style: italic; color: var(--olive); }
-    .article-body p { margin-bottom: 1.5rem; font-size: 1.05rem; }
+    .article-body p { margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body p:last-child { margin-bottom: 0; }
     .article-body strong { font-weight: 600; color: var(--brown); }
     .highlight-box { background: var(--cream-dark); border-left: 3px solid var(--gold); padding: 1.25rem 1.5rem; margin: 2.5rem 0; font-style: italic; color: var(--brown-mid); font-size: 1rem; }
     .data-note { background: rgba(74,92,47,0.06); border-radius: 4px; padding: 1rem 1.25rem; margin: 2rem 0; font-size: 0.94rem; color: var(--brown-mid); }
@@ -93,8 +98,8 @@
     .photo-break {
       width: 100vw; position: relative; left: 50%; transform: translateX(-50%);
       background-size: cover; background-position: center;
-      min-height: 52vh; display: flex; align-items: center;
-      margin: 3.5rem 0;
+      min-height: 48vh; display: flex; align-items: center;
+      margin: 2rem 0;
     }
     .photo-break::before {
       content: ''; position: absolute; inset: 0;
@@ -265,7 +270,7 @@
   </article>
 
   <!-- FOTOĞRAF 3: Eller ve yağ kasesi -->
-  <div class="photo-break photo-break-3" style="background-image: url('blog-polyphenol-3.webp')">
+  <div class="photo-break photo-break-3" style="background-image: url('blog-polyphenol-3.webp'); background-position: center 15%;">
     <div class="photo-break-inner">
       <div class="photo-break-text">
         <span class="photo-break-label">Kalite · Şeffaflık</span>
