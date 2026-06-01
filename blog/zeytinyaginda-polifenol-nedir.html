@@ -31,6 +31,7 @@
       background: rgba(254,252,248,0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(74,92,47,0.12);
+      transition: padding 0.3s;
     }
     .nav-logo img { height: 52px; }
     .nav-links { display: flex; gap: 1.8rem; list-style: none; }
@@ -306,6 +307,11 @@
   </footer>
 
   <script>
+    const navEl = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      navEl.style.padding = window.scrollY > 50 ? '0.7rem 4vw' : '1.2rem 4vw';
+    });
+
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
     menuBtn.addEventListener('click', () => {

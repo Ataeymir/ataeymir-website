@@ -13,7 +13,7 @@
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{font-size:16px;}
     body{font-family:Georgia,'Times New Roman',serif;background:var(--white);color:var(--brown);line-height:1.8;overflow-x:hidden;padding-top:80px;}
-    nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 4vw;background:rgba(254,252,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(74,92,47,0.12);}
+    nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 4vw;background:rgba(254,252,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(74,92,47,0.12);transition:padding 0.3s;}
     .nav-logo img{height:52px;}
     .nav-links{display:flex;gap:1.8rem;list-style:none;}
     .nav-links a{text-decoration:none;color:var(--brown);font-size:0.78rem;letter-spacing:0.15em;text-transform:uppercase;position:relative;transition:color 0.3s;}
@@ -98,7 +98,12 @@
     <a href="/">ataeymir.com.tr</a></p>
   </footer>
   <script>
-    const menuBtn=document.getElementById('menuBtn');const navLinks=document.getElementById('navLinks');
+    const navEl=document.querySelector("nav");
+  window.addEventListener("scroll",()=>{
+    navEl.style.padding=window.scrollY>50?"0.7rem 4vw":"1.2rem 4vw";
+  });
+
+  const menuBtn=document.getElementById('menuBtn');const navLinks=document.getElementById('navLinks');
     menuBtn.addEventListener('click',()=>{navLinks.classList.toggle('open');const isOpen=navLinks.classList.contains('open');document.body.classList.toggle('menu-open',isOpen);menuBtn.innerHTML=isOpen?'<span style="transform:rotate(45deg) translate(5px,5px)"></span><span style="opacity:0"></span><span style="transform:rotate(-45deg) translate(5px,-5px)"></span>':'<span></span><span></span><span></span>';});
     navLinks.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{navLinks.classList.remove('open');document.body.classList.remove('menu-open');menuBtn.innerHTML='<span></span><span></span><span></span>';});});
   </script>
