@@ -118,7 +118,7 @@
 
     .nav-logo img { height: 52px; transition: height 0.3s; }
 
-    .nav-links {
+      
       display: flex;
       gap: 2.5rem;
       list-style: none;
@@ -1075,11 +1075,12 @@
         background: #fefcf8;
         align-items: center;
         justify-content: center;
-        gap: 2.5rem;
+        gap: 1.25rem;
         z-index: 300;
-        overflow: hidden;
+        overflow-y: auto;
+        padding: 3rem 0;
       }
-      .nav-links.open a { font-size: 1.1rem; }
+      .nav-links.open a { font-size: 1rem; }
       body.menu-open { overflow: hidden; position: fixed; width: 100%; }
       .scroll-hint { display: none; }
     }
