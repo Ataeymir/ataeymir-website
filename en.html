@@ -52,30 +52,6 @@
     ]
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is the polyphenol content of Ataeymir olive oil?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ataeymir cold-pressed olive oil contains 325 mg/kg biophenols, exceeding the EFSA threshold of 250 mg/kg. This qualifies for the EFSA 432/2012 authorised health claim: 'Olive oil polyphenols contribute to the protection of blood lipids from oxidative stress.' Report No: 2600549, AYTB Private Food Control Laboratory, TÜRKAK AB-0033-T."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How is Ataeymir olive oil produced?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Olives are hand-harvested every autumn at the green-to-violet transition — the brief window of peak ripeness when polyphenol content is at its highest. They are cold-pressed below 27°C within 24 hours of harvest."
-        }
-      }
-    ]
-  }
-  </script>
 
   <style>
     :root {
@@ -1012,6 +988,46 @@
       .nav-links.open a{font-size:16px;}
       body.menu-open{overflow:hidden;position:fixed;width:100%;}
     }
+
+    /* ─── SSS / FAQ ─────────────────────────────────── */
+    #sss {
+      background: var(--white);
+      padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 8vw, 10rem);
+    }
+    .faq-container { max-width: 760px; margin: 0 auto; }
+    .faq-list { margin-top: 3rem; }
+    .faq-item { border-bottom: 1px solid rgba(74,92,47,0.15); }
+    .faq-item:first-child { border-top: 1px solid rgba(74,92,47,0.15); }
+    .faq-q {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--brown);
+      padding: 1.25rem 2rem 1.25rem 0;
+      cursor: pointer;
+      list-style: none;
+      position: relative;
+      line-height: 1.4;
+    }
+    .faq-q::-webkit-details-marker { display: none; }
+    .faq-q::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.4rem;
+      color: var(--olive);
+      font-style: normal;
+    }
+    details[open] > .faq-q::after { content: '\2212'; }
+    .faq-a {
+      font-size: 0.92rem;
+      line-height: 1.85;
+      color: var(--brown-mid);
+      padding: 0 2rem 1.4rem 0;
+      max-width: 680px;
+    }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYYB0YGPQY"></script>
@@ -1020,6 +1036,20 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-QYYB0YGPQY');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Is shipping included in the price?","acceptedAnswer":{"@type":"Answer","text":"Yes. The price you see on Shopier is the final price; there are no additional shipping charges."}},
+      {"@type":"Question","name":"Where can I buy Ataeymir olive oil?","acceptedAnswer":{"@type":"Answer","text":"You can order directly through ataeymir.com.tr. We are also available on Zeytinhouse."}},
+      {"@type":"Question","name":"Do you offer wholesale orders?","acceptedAnswer":{"@type":"Answer","text":"Yes, with a minimum order of 360 litres. Please use the wholesale contact form on our site for details and pricing."}},
+      {"@type":"Question","name":"What makes Ataeymir different?","acceptedAnswer":{"@type":"Answer","text":"We harvest olives at the cakir stage, the brief window when they transition from green to violet and polyphenol content peaks. Pressing is completed within 24 hours, below 27C. We regularly test and document our product quality through TURKAK-accredited laboratory analysis."}},
+      {"@type":"Question","name":"What are polyphenols and why do they matter?","acceptedAnswer":{"@type":"Answer","text":"They are the bioactive compounds that determine the true health value of olive oil. The European Food Safety Authority has approved a health claim specifically for olive oils rich in these antioxidants."}},
+      {"@type":"Question","name":"How should I store olive oil?","acceptedAnswer":{"@type":"Answer","text":"Keep it in a cool, dark place in a glass or tin container. Plastic and direct sunlight degrade quality over time."}}
+    ]
+  }
   </script>
 </head>
 <body>
@@ -1033,6 +1063,7 @@
       <li><a href="#process">Process</a></li>
       <li><a href="#science">Quality Assurance</a></li>
       <li><a href="/blog/en.html">Blog</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#wholesale">Wholesale</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
       <li><a href="/" class="nav-lang">TR</a></li>
@@ -1357,6 +1388,47 @@
         <div class="b2b-success" id="success-int">
           Thank you; we have received your request and will be in touch via <strong>bilgi@ataeymir.com.tr</strong> soon.
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="faq-container">
+      <p class="section-label reveal">Frequently Asked Questions</p>
+      <h2 class="section-title reveal">Common <em>questions</em></h2>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary class="faq-q">Is shipping included in the price?</summary>
+          <p class="faq-a">Yes. The price you see on Shopier is the final price; there are no additional shipping charges.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">Where can I buy Ataeymir olive oil?</summary>
+          <p class="faq-a">You can order directly through ataeymir.com.tr. We are also available on Zeytinhouse.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">Do you offer wholesale orders?</summary>
+          <p class="faq-a">Yes, with a minimum order of 360 litres. Please use the wholesale contact form on our site for details and pricing.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">What makes Ataeymir different?</summary>
+          <p class="faq-a">We harvest olives at the çakır stage, the brief window when they transition from green to violet and polyphenol content peaks. Pressing is completed within 24 hours, below 27°C. We regularly test and document our product quality through TURKAK-accredited laboratory analysis.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">What are polyphenols and why do they matter?</summary>
+          <p class="faq-a">They are the bioactive compounds that determine the true health value of olive oil. The European Food Safety Authority has approved a health claim specifically for olive oils rich in these antioxidants. You can find a detailed breakdown in our <a href="/blog/polyphenols-in-olive-oil.html" style="color:var(--olive);text-decoration:none;">blog</a>.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">How should I store olive oil?</summary>
+          <p class="faq-a">Keep it in a cool, dark place in a glass or tin container. Plastic and direct sunlight degrade quality over time.</p>
+        </details>
+
       </div>
     </div>
   </section>

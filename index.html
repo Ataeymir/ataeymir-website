@@ -95,30 +95,6 @@
     ]
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Ataeymir zeytinyağının polifenol içeriği nedir?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ataeymir soğuk sıkım zeytinyağının biyofenol içeriği 325 mg/kg olup EFSA'nın belirlediği 250 mg/kg eşiğinin üzerindedir. Bu değer; EFSA 432/2012 kapsamında 'Zeytinyağı polifenolleri, kan lipidlerinin oksidatif strese karşı korunmasına katkıda bulunur' beyanını kullanma hakkı tanımaktadır. Rapor No: 2600549, AYTB Özel Gıda Kontrol Laboratuvarı, TÜRKAK AB-0033-T."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Ataeymir zeytinyağı nasıl üretilir?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Zeytinler her yıl sonbaharda çakır olgunluğunda (ne ham ne de tam olgunlaşmış) elle toplanır. Hasat edilen zeytinler 24 saat içinde 27°C'nin altında soğuk sıkım yöntemiyle işlenir."
-        }
-      }
-    ]
-  }
-  </script>
 
 
 
@@ -1214,6 +1190,46 @@
       .nav-links.open a{font-size:16px;}
       body.menu-open{overflow:hidden;position:fixed;width:100%;}
     }
+
+    /* ─── SSS / FAQ ─────────────────────────────────── */
+    #sss {
+      background: var(--white);
+      padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 8vw, 10rem);
+    }
+    .faq-container { max-width: 760px; margin: 0 auto; }
+    .faq-list { margin-top: 3rem; }
+    .faq-item { border-bottom: 1px solid rgba(74,92,47,0.15); }
+    .faq-item:first-child { border-top: 1px solid rgba(74,92,47,0.15); }
+    .faq-q {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--brown);
+      padding: 1.25rem 2rem 1.25rem 0;
+      cursor: pointer;
+      list-style: none;
+      position: relative;
+      line-height: 1.4;
+    }
+    .faq-q::-webkit-details-marker { display: none; }
+    .faq-q::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.4rem;
+      color: var(--olive);
+      font-style: normal;
+    }
+    details[open] > .faq-q::after { content: '\2212'; }
+    .faq-a {
+      font-size: 0.92rem;
+      line-height: 1.85;
+      color: var(--brown-mid);
+      padding: 0 2rem 1.4rem 0;
+      max-width: 680px;
+    }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYYB0YGPQY"></script>
@@ -1222,6 +1238,20 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-QYYB0YGPQY');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Fiyatlara kargo dahil mi?","acceptedAnswer":{"@type":"Answer","text":"Evet. Shopier'da gördüğünüz fiyat üzerinden başka bir ödeme yapmazsınız."}},
+      {"@type":"Question","name":"Ürünlerinizi nereden satın alabilirim?","acceptedAnswer":{"@type":"Answer","text":"Doğrudan ataeymir.com.tr üzerinden sipariş verebilirsiniz. Ayrıca Zeytinhouse'da da yer alıyoruz."}},
+      {"@type":"Question","name":"Toplu sipariş alıyor musunuz?","acceptedAnswer":{"@type":"Answer","text":"Evet, minimum 360 litre toplu sipariş alıyoruz. Detaylar ve fiyat listesi için toplu sipariş formundan bize ulaşabilirsiniz."}},
+      {"@type":"Question","name":"Ataeymir zeytinyağını farklı kılan ne?","acceptedAnswer":{"@type":"Answer","text":"Zeytinleri çakır evresinde hasat ediyoruz; polifenol içeriğinin en yüksek olduğu an bu. Sıkımı 24 saat içinde, 27°C altında tamamlıyoruz. Ürünümüzün kalitesini TÜRKAK akreditasyonlu laboratuvar analizleriyle düzenli aralıklarla kontrol edip belgeliyoruz."}},
+      {"@type":"Question","name":"Polifenol nedir, neden önemli?","acceptedAnswer":{"@type":"Answer","text":"Zeytinyağının asıl sağlık değerini belirleyen biyoaktif bileşiklerdir. Avrupa Gıda Güvenliği Otoritesi bu bileşikler için yasal bir sağlık beyanı onaylamış durumda."}},
+      {"@type":"Question","name":"Zeytinyağını nasıl saklamalıyım?","acceptedAnswer":{"@type":"Answer","text":"Serin ve karanlık bir ortamda, cam veya teneke kapta saklayın. Plastik kap ve doğrudan güneş ışığı yağın kalitesini düşürür."}}
+    ]
+  }
   </script>
 </head>
 <body>
@@ -1235,6 +1265,7 @@
       <li><a href="#uretim">Üretim</a></li>
       <li><a href="#bilim">Kalite Güvence</a></li>
       <li><a href="/blog/">Blog</a></li>
+      <li><a href="#sss">SSS</a></li>
       <li><a href="#b2b">Toplu Sipariş</a></li>
       <li><a href="#iletisim" class="nav-cta">İletişim</a></li>
       <li><a href="en.html" class="nav-lang">EN</a></li>
@@ -1562,6 +1593,47 @@
         <div class="b2b-success" id="success-int">
           Talebinizi aldık; en kısa sürede <strong>bilgi@ataeymir.com.tr</strong> üzerinden sizinle irtibata geçeceğiz.
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SSS -->
+  <section id="sss">
+    <div class="faq-container">
+      <p class="section-label reveal">Sık Sorulan Sorular</p>
+      <h2 class="section-title reveal">Merak <em>edilenler</em></h2>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary class="faq-q">Fiyatlara kargo dahil mi?</summary>
+          <p class="faq-a">Evet. Shopier'da gördüğünüz fiyat üzerinden başka bir ödeme yapmazsınız.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">Ürünlerinizi nereden satın alabilirim?</summary>
+          <p class="faq-a">Doğrudan ataeymir.com.tr üzerinden sipariş verebilirsiniz. Ayrıca Zeytinhouse'da da yer alıyoruz.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">Toplu sipariş alıyor musunuz?</summary>
+          <p class="faq-a">Evet, minimum 360 litre toplu sipariş alıyoruz. Detaylar ve fiyat listesi için sayfamızdaki toplu sipariş formundan bize ulaşabilirsiniz.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">Ataeymir zeytinyağını farklı kılan ne?</summary>
+          <p class="faq-a">Zeytinleri tam olgunlaşmadan, yeşilden mora döndüğü kısa pencerede hasat ediyoruz. Bu evreye çakır deniyor; polifenol içeriğinin en yüksek olduğu an bu. Sıkımı 24 saat içinde, 27°C altında tamamlıyoruz. Ürünümüzün kalitesini TÜRKAK akreditasyonlu laboratuvar analizleriyle düzenli aralıklarla kontrol edip belgeliyoruz.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">Polifenol nedir, neden önemli?</summary>
+          <p class="faq-a">Zeytinyağının asıl sağlık değerini belirleyen biyoaktif bileşiklerdir. Avrupa Gıda Güvenliği Otoritesi bu bileşikler için yasal bir sağlık beyanı onaylamış durumda. Detaylı bilimsel açıklamayı <a href="/blog/zeytinyaginda-polifenol-nedir.html" style="color:var(--olive);text-decoration:none;">blog yazımızda</a> bulabilirsiniz.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">Zeytinyağını nasıl saklamalıyım?</summary>
+          <p class="faq-a">Serin ve karanlık bir ortamda, cam veya teneke kapta saklayın. Plastik kap ve doğrudan güneş ışığı yağın kalitesini düşürür.</p>
+        </details>
+
       </div>
     </div>
   </section>
