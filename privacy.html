@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Notice | Ataeymir</title>
-  <meta name="description" content="Ataeymir privacy notice and cookie policy. Information on how we process personal data collected through our website." />
+  <meta name="description" content="Ataeymir privacy notice and cookie policy. Information on how we process data collected through our website." />
   <link rel="canonical" href="https://www.ataeymir.com.tr/privacy.html" />
   <link rel="alternate" hreflang="en" href="https://www.ataeymir.com.tr/privacy.html" />
   <link rel="alternate" hreflang="tr" href="https://www.ataeymir.com.tr/kvkk.html" />
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <style>
-        /* === ATAEYMIR NAV === */
+            /* === ATAEYMIR NAV === */
     nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:19px 3.5vw;background:rgba(254,252,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(74,92,47,0.12);line-height:1;}
     .nav-logo img{height:52px;}
     .nav-links{display:flex;gap:29px;list-style:none;}
@@ -84,7 +84,9 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     html { font-size: 16px; scroll-behavior: smooth; }
+
     body {
       font-family: Georgia, 'Times New Roman', serif;
       background: var(--white);
@@ -92,6 +94,7 @@
       line-height: 1.75;
     }
 
+    /* ─── HERO ────────────────────────────── */
     .kvkk-hero {
       background: var(--cream);
       padding: clamp(6rem, 12vw, 10rem) clamp(2rem, 8vw, 10rem) clamp(3rem, 6vw, 5rem);
@@ -111,7 +114,10 @@
       color: var(--brown);
       max-width: 680px;
     }
-    .kvkk-hero h1 em { font-style: italic; color: var(--olive); }
+    .kvkk-hero h1 em {
+      font-style: italic;
+      color: var(--olive);
+    }
     .kvkk-hero .updated {
       margin-top: 1.5rem;
       font-size: 0.8rem;
@@ -119,12 +125,17 @@
       opacity: 0.7;
     }
 
+    /* ─── İÇERİK ──────────────────────────── */
     .kvkk-body {
       max-width: 760px;
       margin: 0 auto;
       padding: clamp(3rem, 6vw, 6rem) clamp(2rem, 8vw, 4rem);
     }
-    .kvkk-section { margin-bottom: 3.5rem; }
+
+    .kvkk-section {
+      margin-bottom: 3.5rem;
+    }
+
     .kvkk-section h2 {
       font-size: 1.15rem;
       font-weight: 400;
@@ -132,14 +143,20 @@
       border-bottom: 1px solid rgba(74,92,47,0.15);
       padding-bottom: 0.6rem;
       margin-bottom: 1.25rem;
+      letter-spacing: 0.01em;
     }
+
     .kvkk-section p {
       font-size: 0.92rem;
       line-height: 1.9;
       color: var(--brown-mid);
       margin-bottom: 0.9rem;
     }
-    .kvkk-section ul { list-style: none; padding: 0; }
+
+    .kvkk-section ul {
+      list-style: none;
+      padding: 0;
+    }
     .kvkk-section ul li {
       font-size: 0.92rem;
       line-height: 1.85;
@@ -147,9 +164,22 @@
       padding: 0.3rem 0 0.3rem 1.25rem;
       position: relative;
     }
-    .kvkk-section ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold); }
-    .kvkk-section a { color: var(--olive); text-decoration: none; border-bottom: 1px solid rgba(74,92,47,0.25); }
-    .kvkk-section a:hover { border-bottom-color: var(--olive); }
+    .kvkk-section ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+    }
+
+    .kvkk-section a {
+      color: var(--olive);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(74,92,47,0.25);
+    }
+    .kvkk-section a:hover {
+      border-bottom-color: var(--olive);
+    }
+
     .info-box {
       background: var(--cream);
       border-left: 3px solid var(--olive);
@@ -157,8 +187,12 @@
       margin: 1.5rem 0;
       border-radius: 0 4px 4px 0;
     }
-    .info-box p { margin: 0; font-size: 0.88rem; }
+    .info-box p {
+      margin: 0;
+      font-size: 0.88rem;
+    }
 
+    /* ─── FOOTER ──────────────────────────── */
     footer {
       background: var(--brown);
       padding: 2rem clamp(2rem, 6vw, 6rem);
@@ -171,8 +205,83 @@
     footer p { color: rgba(245,240,232,0.4); font-size: 0.75rem; margin: 0; }
     footer a { color: rgba(245,240,232,0.4); font-size: 0.75rem; text-decoration: none; }
     footer a:hover { color: #e2c47a; }
+    .footer-links { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+
+    @media (max-width: 600px) {
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+
+    :root {
+      --olive: #4a5c2f; --gold: #c9a84c; --gold-light: #e2c47a;
+      --cream: #f5f0e8; --brown: #2e1f0e; --brown-mid: #5c3d1e; --white: #fefcf8;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: var(--white); color: var(--brown);
+      line-height: 1.75; padding-top: 80px;
+    }
+    .kvkk-hero {
+      background: var(--cream);
+      padding: clamp(3rem, 8vw, 6rem) clamp(2rem, 8vw, 10rem) clamp(2rem, 4vw, 4rem);
+      border-bottom: 1px solid rgba(74,92,47,0.12);
+    }
+    .kvkk-hero .label {
+      font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem;
+    }
+    .kvkk-hero h1 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 300;
+      line-height: 1.2; color: var(--brown); max-width: 680px;
+    }
+    .kvkk-hero h1 em { font-style: italic; color: var(--olive); }
+    .kvkk-hero .updated {
+      margin-top: 1.2rem; font-size: 0.8rem;
+      color: var(--brown-mid); opacity: 0.7;
+    }
+    .kvkk-body {
+      max-width: 760px; margin: 0 auto;
+      padding: clamp(3rem, 6vw, 6rem) clamp(2rem, 8vw, 4rem);
+    }
+    .kvkk-section { margin-bottom: 3rem; }
+    .kvkk-section h2 {
+      font-size: 1.1rem; font-weight: 400; color: var(--olive);
+      border-bottom: 1px solid rgba(74,92,47,0.15);
+      padding-bottom: 0.6rem; margin-bottom: 1.2rem;
+    }
+    .kvkk-section p {
+      font-size: 0.92rem; line-height: 1.9;
+      color: var(--brown-mid); margin-bottom: 0.9rem;
+    }
+    .kvkk-section ul { list-style: none; padding: 0; }
+    .kvkk-section ul li {
+      font-size: 0.92rem; line-height: 1.85; color: var(--brown-mid);
+      padding: 0.3rem 0 0.3rem 1.25rem; position: relative;
+    }
+    .kvkk-section ul li::before {
+      content: '—'; position: absolute; left: 0; color: var(--gold);
+    }
+    .kvkk-section a {
+      color: var(--olive); text-decoration: none;
+      border-bottom: 1px solid rgba(74,92,47,0.25);
+    }
+    .kvkk-section a:hover { border-bottom-color: var(--olive); }
+    .info-box {
+      background: var(--cream); border-left: 3px solid var(--olive);
+      padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0;
+    }
+    .info-box p { margin: 0; font-size: 0.88rem; }
+    footer {
+      background: var(--brown); padding: 2rem clamp(2rem,6vw,6rem);
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 0.5rem;
+    }
+    footer p { color: rgba(245,240,232,0.4); font-size: 0.75rem; margin: 0; }
+    footer a { color: rgba(245,240,232,0.4); font-size: 0.75rem; text-decoration: none; }
+    footer a:hover { color: #e2c47a; }
     .footer-links { display: flex; gap: 1.5rem; align-items: center; }
-    @media (max-width: 600px) { footer { flex-direction: column; align-items: flex-start; } }
+    @media(max-width:600px) { footer { flex-direction:column; align-items:flex-start; } }
   </style>
 </head>
 <body>
@@ -204,101 +313,56 @@
 
     <div class="kvkk-section">
       <h2>1. Data Controller</h2>
-      <p>
-        This notice has been prepared pursuant to Article 10 of the Turkish Personal Data Protection Law
-        (KVKK No. 6698) by <strong>Ataeymir Tarım Tekstil Sanayi ve Ticaret Limited Şirketi</strong>,
-        acting as data controller.
-      </p>
+      <p>This notice has been prepared pursuant to Article 10 of the Turkish Personal Data Protection Law (KVKK No. 6698) by <strong>Ataeymir Tarım Tekstil Sanayi ve Ticaret Limited Şirketi</strong>, acting as data controller.</p>
       <div class="info-box">
         <p>
           Bahriye Üçok Mh. 1762 Sk. No:9/1, Karşıyaka, İzmir, Turkey<br />
-          <a href="mailto:bilgi@ataeymir.com.tr">bilgi@ataeymir.com.tr</a> &nbsp;|&nbsp;
-          +90 533 456 08 73
+          <a href="mailto:bilgi@ataeymir.com.tr">bilgi@ataeymir.com.tr</a> &nbsp;|&nbsp; +90 533 456 08 73
         </p>
       </div>
     </div>
 
     <div class="kvkk-section">
-      <h2>2. Personal Data We Collect</h2>
-      <p>The following personal data is collected via the contact form on our website:</p>
+      <h2>2. Data We Process</h2>
+      <p>This website does not collect personal data through any contact form. When you visit our site, the following technical data is processed automatically:</p>
       <ul>
-        <li>Full name</li>
-        <li>Company name</li>
-        <li>Phone number</li>
-        <li>Email address</li>
-        <li>Message content</li>
-      </ul>
-      <p>The following technical data is also processed automatically via our GitHub Pages hosting infrastructure and Google Analytics 4:</p>
-      <ul>
-        <li>IP address (partially anonymised)</li>
+        <li>IP address (partially anonymised by Google Analytics)</li>
         <li>Device and browser information (User-Agent)</li>
         <li>Pages visited, session duration, and traffic source</li>
+        <li>Server access logs generated by GitHub Pages hosting infrastructure</li>
       </ul>
     </div>
 
     <div class="kvkk-section">
       <h2>3. Purpose of Processing</h2>
       <ul>
-        <li>Responding to enquiries regarding wholesale orders and business cooperation</li>
-        <li>Managing commercial negotiations and proposals</li>
-        <li>Communicating with you in connection with your request</li>
+        <li>Analysing visitor statistics and improving site performance</li>
+        <li>Operating the technical infrastructure securely</li>
       </ul>
     </div>
 
     <div class="kvkk-section">
       <h2>4. Legal Basis</h2>
-      <p>
-        Your data is processed on the basis of <em>our legitimate interests</em> in managing
-        incoming business enquiries (KVKK Article 5/2-f). As the individual submitting the
-        B2B contact form is a representative of a legal entity rather than a direct party to
-        any prospective contract, Article 5/2-c (pre-contractual steps) does not apply in
-        this context. Voluntarily submitting the form with a business enquiry supports the
-        legitimate interest legal basis independently of any explicit consent.
-      </p>
+      <p>Analytical cookies are only activated after you provide explicit consent (KVKK Article 5/1; explicit consent). Technical infrastructure logs are processed on the basis of our <em>legitimate interests</em> in operating the site securely (KVKK Article 5/2-f).</p>
     </div>
 
     <div class="kvkk-section">
       <h2>5. Data Transfers</h2>
-      <p>
-        Sales transactions are processed through <strong>Shopier (Değer Teknoloji A.Ş.)</strong>,
-        which handles payment and order data under its own privacy policy.
-      </p>
-      <p>
-        This website is hosted on <strong>GitHub Pages (GitHub Inc., USA)</strong>. When you
-        access our pages, your IP address and browser information are technically transmitted
-        to GitHub servers. This is governed by GitHub's own privacy policy.
-      </p>
-      <p>
-        Your data is not shared with any other third parties beyond the service providers
-        described above.
-      </p>
+      <p><strong>Google Analytics 4 (Google LLC, USA):</strong> Analytics data is transmitted to Google's servers. Through Consent Mode, no analytics data is transferred unless you have given consent.</p>
+      <p><strong>GitHub Pages (GitHub Inc., USA):</strong> This website is hosted on GitHub Pages. When you access our pages, your IP address and browser information are technically transmitted to GitHub servers. This is governed by GitHub's own privacy policy.</p>
+      <p><strong>Shopier (Değer Teknoloji A.Ş., Turkey):</strong> Product sales are processed through the Shopier platform. Shopier acts as an independent data controller and processes payment and order data under its own privacy policy. Once you are redirected to Shopier from our site, Shopier's data practices apply.</p>
+      <p>Your data is not shared with any other third parties beyond the service providers described above.</p>
     </div>
 
     <div class="kvkk-section">
       <h2>6. Retention Period</h2>
-      <p>
-        Your personal data is retained for a maximum of <strong>1 (one) year</strong> from
-        the date your enquiry is resolved. Where a business relationship results from the
-        enquiry, data may be retained beyond this period subject to applicable statutory
-        retention obligations (Turkish Code of Obligations and Commercial Code). Upon
-        expiry of the retention period, data is deleted or anonymised.
-      </p>
+      <p>Analytics data is retained according to Google's retention settings (up to 14 months by default). GitHub Pages server log retention is governed by GitHub's data policy. If you withdraw your consent, analytical cookies are deactivated immediately.</p>
     </div>
 
     <div class="kvkk-section">
       <h2>7. Cookie Policy</h2>
-      <p>
-        This website uses <strong>Google Analytics 4</strong> to analyse visitor statistics.
-        This service places analytical cookies in your browser. The data collected consists
-        of statistical information such as page views, session duration, and traffic source;
-        it does not directly identify you.
-      </p>
-      <p>
-        You may disable Google Analytics cookies through your browser settings or by using
-        the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">
-          Google Analytics Opt-out Add-on
-        </a>.
-      </p>
+      <p>This website uses only <strong>Google Analytics 4</strong> analytical cookies to analyse visitor statistics. These cookies are only activated upon your consent; if you decline, no analytics data is collected.</p>
+      <p>You may also disable Google Analytics cookies using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Add-on</a>. You can update your cookie preferences at any time via the "Cookie Preferences" link in the footer.</p>
     </div>
 
     <div class="kvkk-section">
@@ -307,29 +371,20 @@
       <ul>
         <li>Learn whether your personal data is being processed</li>
         <li>Request information if it has been processed</li>
-        <li>Learn the purpose of processing and whether data is used in accordance with that purpose</li>
+        <li>Learn the purpose of processing and whether data is used accordingly</li>
         <li>Know the third parties to whom data is transferred domestically or abroad</li>
         <li>Request correction of incomplete or inaccurate data</li>
         <li>Request erasure or destruction under the conditions set out in the law</li>
         <li>Request notification of corrections or erasure to third parties</li>
-        <li>Object to a result arising solely from automated analysis of your data that is detrimental to you</li>
+        <li>Object to a result arising solely from automated analysis of your data</li>
         <li>Claim compensation for damages arising from unlawful processing</li>
       </ul>
     </div>
 
     <div class="kvkk-section">
       <h2>9. How to Exercise Your Rights</h2>
-      <p>
-        To exercise your rights under KVKK Article 11, please contact us in writing at
-        <a href="mailto:bilgi@ataeymir.com.tr">bilgi@ataeymir.com.tr</a>.
-        Please include your full name, contact details, and a clear description of your request.
-        Requests will be responded to within 30 days.
-      </p>
-      <p>
-        The authoritative version of this notice is the
-        <a href="/kvkk.html">Turkish-language text</a>, which governs in the event of any
-        discrepancy.
-      </p>
+      <p>To exercise your rights under KVKK Article 11, please contact us in writing at <a href="mailto:bilgi@ataeymir.com.tr">bilgi@ataeymir.com.tr</a>. Please include your full name, contact details, and a clear description of your request. Requests will be responded to within 30 days.</p>
+      <p>The authoritative version of this notice is the <a href="/kvkk.html">Turkish-language text</a>, which governs in the event of any discrepancy.</p>
     </div>
 
   </main>
@@ -362,13 +417,12 @@
     });
   });
 })();
-</script>
-
   <script>
   function resetCookiePrefs() {
     localStorage.removeItem('cookieConsent');
     window.location.href = '/en.html';
   }
   </script>
+
 </body>
 </html>

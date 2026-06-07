@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gizlilik ve KVKK Aydınlatma Metni | Ataeymir</title>
-  <meta name="description" content="Ataeymir Tarım Tekstil Sanayi ve Ticaret Limited Şirketi kişisel verilerin korunmasına ilişkin aydınlatma metni ve çerez politikası." />
+  <meta name="description" content="Ataeymir web sitesinde kişisel verilerin korunmasına ilişkin aydınlatma metni ve çerez politikası." />
   <link rel="canonical" href="https://www.ataeymir.com.tr/kvkk.html" />
   <link rel="alternate" hreflang="tr" href="https://www.ataeymir.com.tr/kvkk.html" />
   <link rel="alternate" hreflang="en" href="https://www.ataeymir.com.tr/privacy.html" />
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <style>
-        /* === ATAEYMIR NAV === */
+            /* === ATAEYMIR NAV === */
     nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:19px 3.5vw;background:rgba(254,252,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(74,92,47,0.12);line-height:1;}
     .nav-logo img{height:52px;}
     .nav-links{display:flex;gap:29px;list-style:none;}
@@ -210,6 +210,78 @@
     @media (max-width: 600px) {
       footer { flex-direction: column; align-items: flex-start; }
     }
+
+    :root {
+      --olive: #4a5c2f; --gold: #c9a84c; --gold-light: #e2c47a;
+      --cream: #f5f0e8; --brown: #2e1f0e; --brown-mid: #5c3d1e; --white: #fefcf8;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: var(--white); color: var(--brown);
+      line-height: 1.75; padding-top: 80px;
+    }
+    .kvkk-hero {
+      background: var(--cream);
+      padding: clamp(3rem, 8vw, 6rem) clamp(2rem, 8vw, 10rem) clamp(2rem, 4vw, 4rem);
+      border-bottom: 1px solid rgba(74,92,47,0.12);
+    }
+    .kvkk-hero .label {
+      font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem;
+    }
+    .kvkk-hero h1 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 300;
+      line-height: 1.2; color: var(--brown); max-width: 680px;
+    }
+    .kvkk-hero h1 em { font-style: italic; color: var(--olive); }
+    .kvkk-hero .updated {
+      margin-top: 1.2rem; font-size: 0.8rem;
+      color: var(--brown-mid); opacity: 0.7;
+    }
+    .kvkk-body {
+      max-width: 760px; margin: 0 auto;
+      padding: clamp(3rem, 6vw, 6rem) clamp(2rem, 8vw, 4rem);
+    }
+    .kvkk-section { margin-bottom: 3rem; }
+    .kvkk-section h2 {
+      font-size: 1.1rem; font-weight: 400; color: var(--olive);
+      border-bottom: 1px solid rgba(74,92,47,0.15);
+      padding-bottom: 0.6rem; margin-bottom: 1.2rem;
+    }
+    .kvkk-section p {
+      font-size: 0.92rem; line-height: 1.9;
+      color: var(--brown-mid); margin-bottom: 0.9rem;
+    }
+    .kvkk-section ul { list-style: none; padding: 0; }
+    .kvkk-section ul li {
+      font-size: 0.92rem; line-height: 1.85; color: var(--brown-mid);
+      padding: 0.3rem 0 0.3rem 1.25rem; position: relative;
+    }
+    .kvkk-section ul li::before {
+      content: '—'; position: absolute; left: 0; color: var(--gold);
+    }
+    .kvkk-section a {
+      color: var(--olive); text-decoration: none;
+      border-bottom: 1px solid rgba(74,92,47,0.25);
+    }
+    .kvkk-section a:hover { border-bottom-color: var(--olive); }
+    .info-box {
+      background: var(--cream); border-left: 3px solid var(--olive);
+      padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0;
+    }
+    .info-box p { margin: 0; font-size: 0.88rem; }
+    footer {
+      background: var(--brown); padding: 2rem clamp(2rem,6vw,6rem);
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 0.5rem;
+    }
+    footer p { color: rgba(245,240,232,0.4); font-size: 0.75rem; margin: 0; }
+    footer a { color: rgba(245,240,232,0.4); font-size: 0.75rem; text-decoration: none; }
+    footer a:hover { color: #e2c47a; }
+    .footer-links { display: flex; gap: 1.5rem; align-items: center; }
+    @media(max-width:600px) { footer { flex-direction:column; align-items:flex-start; } }
   </style>
 </head>
 <body>
@@ -231,123 +303,68 @@
     </button>
   </nav>
 
-  <!-- HERO -->
   <div class="kvkk-hero">
     <p class="label">Hukuki Bilgilendirme</p>
     <h1>Gizlilik ve <em>KVKK</em> Aydınlatma Metni</h1>
     <p class="updated">Son güncelleme: Haziran 2026</p>
   </div>
 
-  <!-- İÇERİK -->
   <main class="kvkk-body">
 
-    <!-- 1. Veri Sorumlusu -->
     <div class="kvkk-section">
       <h2>1. Veri Sorumlusu</h2>
-      <p>
-        Bu aydınlatma metni; 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun (KVKK) 10. maddesi
-        uyarınca veri sorumlusu sıfatıyla <strong>Ataeymir Tarım Tekstil Sanayi ve Ticaret Limited Şirketi</strong>
-        tarafından hazırlanmıştır.
-      </p>
+      <p>Bu aydınlatma metni; 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun (KVKK) 10. maddesi uyarınca veri sorumlusu sıfatıyla <strong>Ataeymir Tarım Tekstil Sanayi ve Ticaret Limited Şirketi</strong> tarafından hazırlanmıştır.</p>
       <div class="info-box">
         <p>
           Bahriye Üçok Mh. 1762 Sk. No:9/1, Karşıyaka, İzmir<br />
-          <a href="mailto:bilgi@ataeymir.com.tr">bilgi@ataeymir.com.tr</a> &nbsp;|&nbsp;
-          +90 533 456 08 73
+          <a href="mailto:bilgi@ataeymir.com.tr">bilgi@ataeymir.com.tr</a> &nbsp;|&nbsp; +90 533 456 08 73
         </p>
       </div>
     </div>
 
-    <!-- 2. Toplanan Kişisel Veriler -->
     <div class="kvkk-section">
-      <h2>2. Toplanan Kişisel Veriler</h2>
-      <p>Web sitemizde yer alan iletişim formu aracılığıyla aşağıdaki kişisel veriler toplanmaktadır:</p>
+      <h2>2. İşlenen Kişisel Veriler</h2>
+      <p>Web sitemiz, ziyaretçilerden herhangi bir kişisel veri formu aracılığıyla toplamaz. Ancak web sitemizi ziyaret ettiğinizde aşağıdaki teknik veriler otomatik olarak işlenmektedir:</p>
       <ul>
-        <li>Ad ve soyad</li>
-        <li>Şirket unvanı</li>
-        <li>Telefon numarası</li>
-        <li>E-posta adresi</li>
-        <li>Mesaj içeriği</li>
-      </ul>
-      <p>Web sitemizin barındırıldığı GitHub Pages altyapısı ve Google Analytics 4 hizmeti aracılığıyla ayrıca aşağıdaki teknik veriler otomatik olarak işlenmektedir:</p>
-      <ul>
-        <li>IP adresi (kısmen anonimleştirilmiş)</li>
+        <li>IP adresi (Google Analytics tarafından kısmen anonimleştirilmiş)</li>
         <li>Cihaz ve tarayıcı bilgileri (User-Agent)</li>
         <li>Ziyaret edilen sayfalar, oturum süresi ve trafik kaynağı</li>
+        <li>GitHub Pages altyapısı tarafından oluşturulan sunucu erişim kayıtları</li>
       </ul>
     </div>
 
-    <!-- 3. İşleme Amacı -->
     <div class="kvkk-section">
-      <h2>3. Kişisel Verilerin İşlenme Amacı</h2>
+      <h2>3. İşleme Amacı</h2>
       <ul>
-        <li>İletişim, iş birliği ve toplu sipariş taleplerinizin karşılanması</li>
-        <li>Ticari görüşme ve teklif süreçlerinin yürütülmesi</li>
-        <li>Tarafınızla yazışma ve iletişim kurulması</li>
+        <li>Web sitesi ziyaretçi istatistiklerini analiz etmek ve site performansını iyileştirmek</li>
+        <li>Teknik altyapının güvenli biçimde işletilmesi</li>
       </ul>
     </div>
 
-    <!-- 4. Hukuki Sebep -->
     <div class="kvkk-section">
       <h2>4. Hukuki Sebep</h2>
-      <p>
-        Verileriniz; KVKK Madde 5/2-f kapsamında <em>veri sorumlusunun meşru menfaatlerinin korunması</em>
-        hukuki sebebine dayanılarak işlenmektedir. B2B iletişim formunu dolduran gerçek kişi, kurulacak
-        sözleşmenin doğrudan tarafı olmadığından Madde 5/2-c (sözleşme ön hazırlığı) bu süreç için
-        uygulanmamaktadır. Formun kendi isteğinizle doldurulması ve iş birliği talebi iletilmesi,
-        meşru menfaat kapsamındaki veri işlemenin hukuka uygunluğunu desteklemektedir.
-      </p>
+      <p>Analitik çerezler yalnızca ziyaretçinin açık onayı alındıktan sonra etkinleştirilmektedir (KVKK Madde 5/1; açık rıza). Teknik altyapı logları ise hizmetin güvenli sunulması için zorunlu olup KVKK Madde 5/2-f (meşru menfaat) kapsamında işlenmektedir.</p>
     </div>
 
-    <!-- 5. Verilerin Aktarımı -->
     <div class="kvkk-section">
       <h2>5. Verilerin Aktarımı</h2>
-      <p>
-        Satış işlemleri <strong>Shopier (Değer Teknoloji A.Ş.)</strong> altyapısı üzerinden
-        gerçekleştirilmektedir. Shopier, ödeme ve sipariş verilerini kendi gizlilik politikası
-        çerçevesinde bağımsız olarak işlemektedir.
-      </p>
-      <p>
-        Web sitemiz <strong>GitHub Pages (GitHub Inc., ABD)</strong> altyapısında barındırılmaktadır.
-        Sayfalarımıza erişildiğinde IP adresi ve tarayıcı bilgileri teknik olarak GitHub sunucularına
-        iletilmektedir. Bu durum, GitHub'ın kendi gizlilik politikası kapsamında değerlendirilmektedir.
-      </p>
-      <p>
-        Verileriniz; yukarıda belirtilen hizmet sağlayıcılar dışında herhangi bir üçüncü kişi
-        veya kuruluşla paylaşılmamaktadır.
-      </p>
+      <p><strong>Google Analytics 4 (Google LLC, ABD):</strong> Analitik veriler Google'ın sunucularına iletilmektedir. Onay yönetimi (Consent Mode) ile onay verilmeden herhangi bir analitik veri aktarılmamaktadır.</p>
+      <p><strong>GitHub Pages (GitHub Inc., ABD):</strong> Web sitemiz GitHub Pages altyapısında barındırılmaktadır. Sayfalarımıza erişildiğinde IP adresi ve tarayıcı bilgileri teknik olarak GitHub sunucularına iletilmektedir.</p>
+      <p><strong>Shopier (Değer Teknoloji A.Ş.):</strong> Ürün satışları Shopier platformu aracılığıyla gerçekleştirilmektedir. Shopier, bağımsız bir veri sorumlusu olarak kendi gizlilik politikası çerçevesinde ödeme ve sipariş verilerini işlemektedir. Sitemizden Shopier'a yönlendirilmeniz halinde Shopier'ın veri işleme uygulamaları geçerli olacaktır.</p>
+      <p>Verileriniz; yukarıda belirtilen hizmet sağlayıcılar dışında herhangi bir üçüncü kişiyle paylaşılmamaktadır.</p>
     </div>
 
-    <!-- 6. Saklama Süresi -->
     <div class="kvkk-section">
       <h2>6. Saklama Süresi</h2>
-      <p>
-        Kişisel verileriniz; iletişim talebinizin sonuçlanmasından itibaren en fazla <strong>1 (bir) yıl</strong>
-        süreyle saklanmaktadır. Ticari bir ilişkiye dönüşmesi durumunda veriler, ilgili yasal saklama
-        yükümlülükleri (Borçlar Kanunu ve Ticaret Kanunu kapsamında) saklı kalmak kaydıyla bu
-        sürenin ötesinde tutulabilir. Saklama süresinin dolmasıyla birlikte veriler silinmekte
-        veya anonim hale getirilmektedir.
-      </p>
+      <p>Analitik veriler Google tarafından belirlenen saklama süreleri kapsamında işlenmektedir (varsayılan olarak 14 aya kadar). GitHub Pages sunucu logları için saklama süresi GitHub'ın veri politikasına tabidir. Açık rızanızı geri çekmeniz halinde analitik çerezler derhal devre dışı bırakılır.</p>
     </div>
 
-    <!-- 7. Çerez Politikası -->
     <div class="kvkk-section">
       <h2>7. Çerez Politikası</h2>
-      <p>
-        Web sitemizde ziyaretçi davranışlarını analiz etmek amacıyla <strong>Google Analytics 4</strong>
-        hizmeti kullanılmaktadır. Bu hizmet, tarayıcınıza analitik çerezler yerleştirmektedir.
-        Toplanan veriler; sayfa görüntülemeleri, oturum süresi ve trafik kaynağı gibi istatistiksel
-        bilgilerden oluşmakta olup doğrudan kimlik tespitine olanak tanıyan nitelikte değildir.
-      </p>
-      <p>
-        Google Analytics çerezlerini tarayıcı ayarlarınızdan devre dışı bırakabilir ya da
-        <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">
-          Google Analytics Opt-out eklentisini
-        </a> kullanabilirsiniz.
-      </p>
+      <p>Web sitemizde yalnızca ziyaretçi istatistiklerini analiz etmek amacıyla <strong>Google Analytics 4</strong> analitik çerezleri kullanılmaktadır. Bu çerezler yalnızca onay vermeniz halinde etkinleşir; reddetmeniz durumunda herhangi bir analitik veri toplanmaz.</p>
+      <p>Google Analytics çerezlerini <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out eklentisi</a> aracılığıyla da devre dışı bırakabilirsiniz. Çerez tercihlerinizi sayfanın alt kısmındaki "Çerez Tercihlerini Düzenle" bağlantısından her zaman güncelleyebilirsiniz.</p>
     </div>
 
-    <!-- 8. İlgili Kişi Hakları -->
     <div class="kvkk-section">
       <h2>8. İlgili Kişi Hakları (KVKK Madde 11)</h2>
       <p>KVKK kapsamında aşağıdaki haklara sahipsiniz:</p>
@@ -364,16 +381,9 @@
       </ul>
     </div>
 
-    <!-- 9. Başvuru -->
     <div class="kvkk-section">
       <h2>9. Başvuru Yöntemi</h2>
-      <p>
-        KVKK Madde 11 kapsamındaki haklarınızı kullanmak için
-        <a href="mailto:bilgi@ataeymir.com.tr">bilgi@ataeymir.com.tr</a> adresine
-        yazılı olarak başvurabilirsiniz. Başvurunuzda adınız, soyadınız, iletişim bilgileriniz
-        ve talebinizin açık ifadesi yer almalıdır. Başvurular en geç 30 gün içinde
-        sonuçlandırılacaktır.
-      </p>
+      <p>KVKK Madde 11 kapsamındaki haklarınızı kullanmak için <a href="mailto:bilgi@ataeymir.com.tr">bilgi@ataeymir.com.tr</a> adresine yazılı olarak başvurabilirsiniz. Başvurunuzda adınız, soyadınız, iletişim bilgileriniz ve talebinizin açık ifadesi yer almalıdır. Başvurular en geç 30 gün içinde sonuçlandırılacaktır.</p>
     </div>
 
   </main>
@@ -406,13 +416,12 @@
     });
   });
 })();
-</script>
-
   <script>
   function resetCookiePrefs() {
     localStorage.removeItem('cookieConsent');
     window.location.href = '/';
   }
   </script>
+
 </body>
 </html>
