@@ -989,70 +989,58 @@
       body.menu-open{overflow:hidden;position:fixed;width:100%;}
     }
 
-    /* ─── SSS / FAQ ─────────────────────────────────── */
-    #sss {
-      background: var(--white);
-      padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 8vw, 10rem);
-    }
-    .faq-container { max-width: 760px; margin: 0 auto; }
-    .faq-list { margin-top: 3rem; }
-    .faq-item { border-bottom: 1px solid rgba(74,92,47,0.15); }
-    .faq-item:first-child { border-top: 1px solid rgba(74,92,47,0.15); }
-    .faq-q {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 1rem;
-      font-weight: 400;
-      color: var(--brown);
-      padding: 1.25rem 2rem 1.25rem 0;
-      cursor: pointer;
-      list-style: none;
-      position: relative;
-      line-height: 1.4;
-    }
-    .faq-q::-webkit-details-marker { display: none; }
-    .faq-q::after {
-      content: '+';
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1.4rem;
-      color: var(--olive);
-      font-style: normal;
-    }
-    details[open] > .faq-q::after { content: '\2212'; }
-    .faq-a {
-      font-size: 0.92rem;
-      line-height: 1.85;
-      color: var(--brown-mid);
-      padding: 0 2rem 1.4rem 0;
-      max-width: 680px;
-    }
+    .reveal { opacity: 1; transform: none; }
+    .wholesale-cta { text-align:center; padding:2.5rem 1rem 1rem; border-top:1px solid rgba(74,92,47,0.12); margin-top:1rem; }
+    .wholesale-cta p { font-size:0.85rem; color:var(--brown-mid); margin-bottom:0.6rem; }
+    .wholesale-email { color:var(--olive); font-size:1rem; font-family:Georgia,serif; text-decoration:none; border-bottom:1px solid rgba(74,92,47,0.25); }
+    .wholesale-email:hover { border-bottom-color:var(--olive); }
+    .footer-links { display:flex; gap:1.5rem; align-items:center; flex-wrap:wrap; }
+    @media(max-width:600px){ .footer-links { flex-direction:column; gap:0.5rem; } }
+    #cookie-banner { position:fixed; bottom:0; left:0; right:0; background:var(--brown); color:rgba(245,240,232,0.85); padding:1.1rem clamp(1.5rem,6vw,5rem); display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap; z-index:9999; font-size:0.8rem; line-height:1.6; box-shadow:0 -2px 16px rgba(0,0,0,0.18); }
+    #cookie-banner p { margin:0; flex:1; min-width:200px; }
+    #cookie-banner a { color:#e2c47a; text-decoration:none; }
+    .cookie-btns { display:flex; gap:0.75rem; flex-shrink:0; }
+    .cookie-accept { background:var(--olive); color:#fefcf8; border:none; padding:0.5rem 1.25rem; font-family:Georgia,serif; font-size:0.78rem; cursor:pointer; border-radius:2px; }
+    .cookie-decline { background:transparent; color:rgba(245,240,232,0.55); border:1px solid rgba(245,240,232,0.2); padding:0.5rem 1.25rem; font-family:Georgia,serif; font-size:0.78rem; cursor:pointer; border-radius:2px; }
+    #faq { background:var(--white); padding:clamp(4rem,8vw,8rem) clamp(2rem,8vw,10rem); }
+    .faq-container { max-width:760px; margin:0 auto; }
+    .faq-list { margin-top:3rem; }
+    .faq-item { border-bottom:1px solid rgba(74,92,47,0.15); }
+    .faq-item:first-child { border-top:1px solid rgba(74,92,47,0.15); }
+    .faq-q { font-family:Georgia,'Times New Roman',serif; font-size:1rem; font-weight:400; color:var(--brown); padding:1.25rem 2rem 1.25rem 0; cursor:pointer; list-style:none; position:relative; line-height:1.4; }
+    .faq-q::-webkit-details-marker { display:none; }
+    .faq-q::after { content:'+'; position:absolute; right:0; top:50%; transform:translateY(-50%); font-size:1.4rem; color:var(--olive); }
+    details[open] > .faq-q::after { content:'\2212'; }
+    .faq-a { font-size:0.92rem; line-height:1.85; color:var(--brown-mid); padding:0 2rem 1.4rem 0; max-width:680px; }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYYB0YGPQY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { 'analytics_storage': 'denied' });
     gtag('js', new Date());
     gtag('config', 'G-QYYB0YGPQY');
+    if (localStorage.getItem('cookieConsent') === 'accepted') {
+      gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    }
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Ataeymir","url":"https://www.ataeymir.com.tr"}
   </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type":"Question","name":"Is shipping included in the price?","acceptedAnswer":{"@type":"Answer","text":"Yes. The price you see on Shopier is the final price; there are no additional shipping charges."}},
+      {"@type":"Question","name":"Is shipping included in the price?","acceptedAnswer":{"@type":"Answer","text":"Yes. The price you see on Shopier is the final price."}},
       {"@type":"Question","name":"Where can I buy Ataeymir olive oil?","acceptedAnswer":{"@type":"Answer","text":"You can order directly through ataeymir.com.tr. We are also available on Zeytinhouse."}},
-      {"@type":"Question","name":"Do you offer wholesale orders?","acceptedAnswer":{"@type":"Answer","text":"Yes, with a minimum order of 360 litres. Please use the wholesale contact form on our site for details and pricing."}},
-      {"@type":"Question","name":"What makes Ataeymir different?","acceptedAnswer":{"@type":"Answer","text":"We harvest olives at the cakir stage, the brief window when they transition from green to violet and polyphenol content peaks. Pressing is completed within 24 hours, below 27C. We regularly test and document our product quality through TURKAK-accredited laboratory analysis."}},
-      {"@type":"Question","name":"What are polyphenols and why do they matter?","acceptedAnswer":{"@type":"Answer","text":"They are the bioactive compounds that determine the true health value of olive oil. The European Food Safety Authority has approved a health claim specifically for olive oils rich in these antioxidants."}},
-      {"@type":"Question","name":"How should I store olive oil?","acceptedAnswer":{"@type":"Answer","text":"Keep it in a cool, dark place in a glass or tin container. Plastic and direct sunlight degrade quality over time."}}
+      {"@type":"Question","name":"Do you offer wholesale orders?","acceptedAnswer":{"@type":"Answer","text":"Yes, with a minimum order of 360 litres. For details and pricing please email bilgi@ataeymir.com.tr."}},
+      {"@type":"Question","name":"What makes Ataeymir different?","acceptedAnswer":{"@type":"Answer","text":"We harvest olives at the cakir stage when polyphenol content peaks, cold-press within 24 hours below 27C, and document quality through TURKAK-accredited lab analysis."}},
+      {"@type":"Question","name":"What are polyphenols and why do they matter?","acceptedAnswer":{"@type":"Answer","text":"They are the bioactive compounds that determine the true health value of olive oil. The EFSA has approved a health claim for olive oils rich in these antioxidants."}},
+      {"@type":"Question","name":"How should I store olive oil?","acceptedAnswer":{"@type":"Answer","text":"Keep it in a cool dark place in a glass or tin container. Plastic and direct sunlight degrade quality."}}
     ]
   }
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","name":"Ataeymir","url":"https://www.ataeymir.com.tr"}
   </script>
 </head>
 <body>
@@ -1067,7 +1055,6 @@
       <li><a href="#science">Quality Assurance</a></li>
       <li><a href="/blog/en.html">Blog</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="#wholesale">Wholesale</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
       <li><a href="/" class="nav-lang">TR</a></li>
     </ul>
@@ -1313,125 +1300,37 @@
     </div>
   </section>
 
-  <!-- WHOLESALE / B2B -->
-  <section id="wholesale">
-    <div class="b2b-header">
-      <p class="section-label reveal">Wholesale & Corporate</p>
-      <h2 class="section-title reveal">Request a <em>quote</em></h2>
-    </div>
-
-    <div class="b2b-grid">
-      <!-- Domestic -->
-      <div class="b2b-card reveal">
-        <p class="b2b-card-label">Domestic</p>
-        <h3>Orders within Turkey</h3>
-        <p>For corporate gifting or bulk purchases within Turkey, please fill out the form below and we will get back to you promptly.</p>
-        <form class="b2b-form" action="https://formspree.io/f/xvzvnrle" method="POST">
-          <input type="hidden" name="_subject" value="Domestic Wholesale Enquiry" />
-          <label>Full Name *</label>
-          <input type="text" name="full_name" required />
-          <label>Company / Organisation</label>
-          <input type="text" name="company" />
-          <label>Email *</label>
-          <input type="email" name="email" required />
-          <label>Phone</label>
-          <input type="tel" name="phone" />
-          <label>Product of Interest</label>
-          <select name="product">
-            <option value="">Please select</option>
-            <option>Cold-Pressed 750 ml</option>
-            <option>Cold-Pressed 1000 ml</option>
-            <option>Extra Virgin 5 Litres</option>
-            <option>Cold-Pressed 5 Litres</option>
-            <option>Other</option>
-          </select>
-          <label>Estimated Quantity</label>
-          <input type="text" name="quantity" placeholder="e.g. 50 units" />
-          <label>Message</label>
-          <textarea name="message"></textarea>
-          <button type="submit" class="b2b-submit">Send Enquiry</button>
-        </form>
-        <div class="b2b-success" id="success-dom">
-          Thank you; we have received your request and will be in touch via <strong>bilgi@ataeymir.com.tr</strong> soon.
-        </div>
-      </div>
-
-      <!-- International -->
-      <div class="b2b-card reveal" style="transition-delay:0.15s">
-        <p class="b2b-card-label">International</p>
-        <h3>International orders</h3>
-        <p>We offer tailored logistics and pricing for international shipping. Submit an enquiry and we will prepare a personalised proposal for you.</p>
-        <form class="b2b-form" action="https://formspree.io/f/xvzvnrle" method="POST">
-          <input type="hidden" name="_subject" value="International Wholesale Enquiry" />
-          <label>Full Name *</label>
-          <input type="text" name="full_name" required />
-          <label>Company / Organisation</label>
-          <input type="text" name="company" />
-          <label>Email *</label>
-          <input type="email" name="email" required />
-          <label>Phone</label>
-          <input type="tel" name="phone" />
-          <label>Country *</label>
-          <input type="text" name="country" required />
-          <label>Product of Interest</label>
-          <select name="product">
-            <option value="">Please select</option>
-            <option>Cold-Pressed 750 ml</option>
-            <option>Cold-Pressed 1000 ml</option>
-            <option>Extra Virgin 5 Litres</option>
-            <option>Cold-Pressed 5 Litres</option>
-            <option>Other</option>
-          </select>
-          <label>Estimated Quantity</label>
-          <input type="text" name="quantity" placeholder="e.g. 100 units" />
-          <label>Message</label>
-          <textarea name="message"></textarea>
-          <button type="submit" class="b2b-submit">Send Enquiry</button>
-        </form>
-        <div class="b2b-success" id="success-int">
-          Thank you; we have received your request and will be in touch via <strong>bilgi@ataeymir.com.tr</strong> soon.
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- FAQ -->
   <section id="faq">
     <div class="faq-container">
-      <p class="section-label reveal">Frequently Asked Questions</p>
-      <h2 class="section-title reveal">Common <em>questions</em></h2>
+      <p class="section-label">Frequently Asked Questions</p>
+      <h2 class="section-title">Common <em>questions</em></h2>
       <div class="faq-list">
-
         <details class="faq-item">
           <summary class="faq-q">Is shipping included in the price?</summary>
           <p class="faq-a">Yes. The price you see on Shopier is the final price; there are no additional shipping charges.</p>
         </details>
-
         <details class="faq-item">
           <summary class="faq-q">Where can I buy Ataeymir olive oil?</summary>
           <p class="faq-a">You can order directly through ataeymir.com.tr. We are also available on Zeytinhouse.</p>
         </details>
-
         <details class="faq-item">
           <summary class="faq-q">Do you offer wholesale orders?</summary>
-          <p class="faq-a">Yes, with a minimum order of 360 litres. Please use the wholesale contact form on our site for details and pricing.</p>
+          <p class="faq-a">Yes, with a minimum order of 360 litres. For details and pricing, please email <a href="mailto:bilgi@ataeymir.com.tr?subject=Wholesale Enquiry" style="color:var(--olive);text-decoration:none;">bilgi@ataeymir.com.tr</a>.</p>
         </details>
-
         <details class="faq-item">
           <summary class="faq-q">What makes Ataeymir different?</summary>
           <p class="faq-a">We harvest olives at the çakır stage, the brief window when they transition from green to violet and polyphenol content peaks. Pressing is completed within 24 hours, below 27°C. We regularly test and document our product quality through TURKAK-accredited laboratory analysis.</p>
         </details>
-
         <details class="faq-item">
           <summary class="faq-q">What are polyphenols and why do they matter?</summary>
           <p class="faq-a">They are the bioactive compounds that determine the true health value of olive oil. The European Food Safety Authority has approved a health claim specifically for olive oils rich in these antioxidants. You can find a detailed breakdown in our <a href="/blog/polyphenols-in-olive-oil.html" style="color:var(--olive);text-decoration:none;">blog</a>.</p>
         </details>
-
         <details class="faq-item">
           <summary class="faq-q">How should I store olive oil?</summary>
           <p class="faq-a">Keep it in a cool, dark place in a glass or tin container. Plastic and direct sunlight degrade quality over time.</p>
         </details>
-
       </div>
     </div>
   </section>
@@ -1481,7 +1380,11 @@
   <!-- FOOTER -->
     <footer>
     <p>© 2026 Ataeymir Tarım Tekstil Sanayi ve Ticaret Limited Şirketi</p>
-    <a href="mailto:bilgi@ataeymir.com.tr">bilgi@ataeymir.com.tr</a>
+    <div class="footer-links">
+      <a href="mailto:bilgi@ataeymir.com.tr">bilgi@ataeymir.com.tr</a>
+      <a href="/privacy.html">Privacy Notice</a>
+      <a href="#" onclick="resetCookiePrefs();return false;">Cookie Preferences</a>
+    </div>
   </footer>
 
   <script>
@@ -1530,5 +1433,34 @@
   });
 })();
 </script>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" style="display:none;">
+    <p>This site uses Google Analytics cookies to analyse visit statistics. For details, please review our <a href="/privacy.html">Privacy Notice</a>.</p>
+    <div class="cookie-btns">
+      <button class="cookie-accept" id="cookieAccept">Accept</button>
+      <button class="cookie-decline" id="cookieDecline">Decline</button>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var banner = document.getElementById('cookie-banner');
+      if (!localStorage.getItem('cookieConsent')) { banner.style.display = 'flex'; }
+      document.getElementById('cookieAccept').addEventListener('click', function(){
+        localStorage.setItem('cookieConsent', 'accepted');
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        banner.style.display = 'none';
+      });
+      document.getElementById('cookieDecline').addEventListener('click', function(){
+        localStorage.setItem('cookieConsent', 'declined');
+        banner.style.display = 'none';
+      });
+    })();
+    window.resetCookiePrefs = function() {
+      localStorage.removeItem('cookieConsent');
+      var b = document.getElementById('cookie-banner');
+      if (b) { b.style.display = 'flex'; }
+    };
+  </script>
 </body>
 </html>

@@ -7,7 +7,7 @@
   <meta name="description" content="Readings on olive oil, polyphenols, harvest and production from Ataeymir." />
   <link rel="canonical" href="https://www.ataeymir.com.tr/blog/en.html" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYYB0YGPQY"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYYB0YGPQY');</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied'});gtag('js',new Date());gtag('config','G-QYYB0YGPQY');if(localStorage.getItem('cookieConsent')==='accepted'){gtag('consent','update',{'analytics_storage':'granted'});}</script>
   <style>
     :root{--olive:#4a5c2f;--olive-mid:#6b7d45;--olive-light:#5a7038;--gold:#c9a84c;--gold-light:#e2c47a;--cream:#f5f0e8;--cream-dark:#ede5d4;--brown:#2e1f0e;--brown-mid:#5c3d1e;--white:#fefcf8;}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -62,17 +62,15 @@
       .nav-links.open a{font-size:16px;}
       body.menu-open{overflow:hidden;position:fixed;width:100%;}
     }
+
+    #cookie-banner { position:fixed; bottom:0; left:0; right:0; background:#2e1f0e; color:rgba(245,240,232,0.85); padding:1.1rem clamp(1.5rem,6vw,5rem); display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap; z-index:9999; font-size:0.8rem; line-height:1.6; box-shadow:0 -2px 16px rgba(0,0,0,0.18); }
+    #cookie-banner p { margin:0; flex:1; min-width:200px; }
+    #cookie-banner a { color:#e2c47a; text-decoration:none; }
+    .cookie-btns { display:flex; gap:0.75rem; flex-shrink:0; }
+    .cookie-accept { background:#4a5c2f; color:#fefcf8; border:none; padding:0.5rem 1.25rem; font-family:Georgia,serif; font-size:0.78rem; cursor:pointer; border-radius:2px; }
+    .cookie-decline { background:transparent; color:rgba(245,240,232,0.55); border:1px solid rgba(245,240,232,0.2); padding:0.5rem 1.25rem; font-family:Georgia,serif; font-size:0.78rem; cursor:pointer; border-radius:2px; }
+    .footer-links { display:flex; gap:1.5rem; align-items:center; flex-wrap:wrap; }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type":"ListItem","position":1,"name":"Ataeymir","item":"https://www.ataeymir.com.tr/en.html"},
-      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.ataeymir.com.tr/blog/en.html"}
-    ]
-  }
-  </script>
 </head>
 <body>
   <nav>
@@ -84,7 +82,6 @@
       <li><a href="/en.html#science">Quality Assurance</a></li>
       <li><a href="/blog/en.html" class="active">Blog</a></li>
       <li><a href="/en.html#faq">FAQ</a></li>
-      <li><a href="/en.html#wholesale">Wholesale</a></li>
       <li><a href="/en.html#contact" class="nav-cta">Contact</a></li>
       <li><a href="/blog/" class="nav-lang">TR</a></li>
     </ul>
@@ -115,7 +112,11 @@
 
     <footer>
     <p>© 2026 Ataeymir Tarım Tekstil Sanayi ve Ticaret Limited Şirketi</p>
-    <a href="mailto:bilgi@ataeymir.com.tr">bilgi@ataeymir.com.tr</a>
+    <div class="footer-links">
+      <a href="mailto:bilgi@ataeymir.com.tr">bilgi@ataeymir.com.tr</a>
+      <a href="/privacy.html">Privacy Notice</a>
+      <a href="#" onclick="resetCookiePrefs();return false;">Cookie Preferences</a>
+    </div>
   </footer>
 <script>
 (function(){
@@ -137,5 +138,14 @@
   });
 })();
 </script>
+
+  <div id="cookie-banner" style="display:none;">
+    <p>This site uses Google Analytics cookies to analyse visit statistics. For details, please review our <a href="/privacy.html">Privacy Notice</a>.</p>
+    <div class="cookie-btns">
+      <button class="cookie-accept" id="cookieAccept">Accept</button>
+      <button class="cookie-decline" id="cookieDecline">Decline</button>
+    </div>
+  </div>
+  <script>(function(){var b=document.getElementById('cookie-banner');if(!localStorage.getItem('cookieConsent')){b.style.display='flex';}document.getElementById('cookieAccept').addEventListener('click',function(){localStorage.setItem('cookieConsent','accepted');gtag('consent','update',{'analytics_storage':'granted'});b.style.display='none';});document.getElementById('cookieDecline').addEventListener('click',function(){localStorage.setItem('cookieConsent','declined');b.style.display='none';});})();window.resetCookiePrefs=function(){localStorage.removeItem('cookieConsent');var b=document.getElementById('cookie-banner');if(b){b.style.display='flex';}};</script>
 </body>
 </html>
