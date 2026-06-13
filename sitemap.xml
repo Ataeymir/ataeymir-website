@@ -74,4 +74,22 @@
     <priority>0.3</priority>
   </url>
 
+  <url>
+    <loc>https://www.ataeymir.com.tr/blog/zeytinyagini-sadece-salatalara-mi-sakliyorsunuz.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ataeymir.com.tr/blog/zeytinyagini-sadece-salatalara-mi-sakliyorsunuz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ataeymir.com.tr/blog/cooking-with-olive-oil.html"/>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ataeymir.com.tr/blog/cooking-with-olive-oil.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ataeymir.com.tr/blog/cooking-with-olive-oil.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ataeymir.com.tr/blog/zeytinyagini-sadece-salatalara-mi-sakliyorsunuz.html"/>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
