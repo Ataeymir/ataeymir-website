@@ -92,4 +92,22 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://www.ataeymir.com.tr/blog/zeytinyagi-neden-buzdolabinda-donar.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ataeymir.com.tr/blog/zeytinyagi-neden-buzdolabinda-donar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ataeymir.com.tr/blog/why-does-olive-oil-solidify-in-the-fridge.html"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ataeymir.com.tr/blog/why-does-olive-oil-solidify-in-the-fridge.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ataeymir.com.tr/blog/why-does-olive-oil-solidify-in-the-fridge.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ataeymir.com.tr/blog/zeytinyagi-neden-buzdolabinda-donar.html"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
